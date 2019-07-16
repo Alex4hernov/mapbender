@@ -1,0 +1,19 @@
+{
+    "name": "wheregroup/jquerydialogextendjs",
+    "type": "component",
+    "description": "Maximize and Minimize Buttons for UI Dialog",
+    "homepage": "https://github.com/ROMB/jquery-dialogextend",
+    "license": "MIT",
+    "extra": {
+        "component": {
+            "scripts": ["build/*.min.js"]
+        }
+    },
+    "require":{
+      "robloach/component-installer": "0.x"
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "web/assets"
+    }
+}

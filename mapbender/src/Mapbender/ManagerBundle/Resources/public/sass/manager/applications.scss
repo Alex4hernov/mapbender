@@ -1,0 +1,324 @@
+@import "libs/variables";
+@import "libs/mixins";
+@import "libs/icons";
+
+@import 'bundles/mapbendermanager/sass/manager/manager.scss';
+
+@import "bundles/mapbendermanager/sass/element/form.scss";
+@import "bundles/mapbendermanager/sass/element/layertree.scss";
+@import "bundles/mapbendermanager/sass/element/map.scss";
+@import "bundles/mapbendermanager/sass/element/printclient.scss";
+@import "bundles/mapbendermanager/sass/manager/services.scss";
+@import "bundles/mapbendermanager/sass/manager/user_control.scss";
+
+// ------------------------------------------------------- APPLICATIONS
+.screenshot_upload {
+  min-width: 300px;
+  .upload {
+    position: relative;
+  }
+
+  .inputWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    input[type=file] {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      -moz-opacity: 0;
+      -khtml-opacity: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+  .upload_label{
+    overflow: hidden;
+  }
+  .upload_button {
+    $buttonFirstColor: #6fb536;
+    padding: 0 10px;
+    font-weight: normal;
+    cursor: pointer;
+
+    &.hover,
+    &:hover {
+      background-color: darken($buttonFirstColor, 5%);
+    }
+  }
+  .upload_button, .upload_label, .inputWrapper input[type=file] {
+    line-height: 24px;
+  }
+}
+
+.listFilterApplicationBoxes{
+  $col1Width: 120px;
+  $height:120px;
+
+  .filterItem, .col2 {
+    min-height:$height;
+  }
+  .col1{
+    width:$col1Width;
+    padding: 0;
+    display:table;
+    text-align: center;
+    font-size: 70px;
+    color: lighten($darkFontColor, 10%);
+
+    div.cell {
+      display: table-cell;
+      vertical-align:middle;
+      height: 120px;
+      width: 120px;
+
+      img{
+         max-height: 100%;
+         max-width: 100%;
+         display: block;
+         margin: 0 auto;
+      }
+    }
+  }
+
+  .col2{
+    margin-left: $col1Width;
+  }
+  .iconAppDefault{
+    &:before {
+      margin: 0;
+    }
+  }
+}
+.mapbender-popup {
+  // modal mapbender popups only appear in the backend, aka manager application
+  width: max($popupModalWidth, $elementPopupWidth);
+}
+.popup.elementPopup {
+  width: $elementPopupWidth;
+  min-width: $popupModalWidth;
+  .popupContent, .popupSubContent {
+    min-width: $elementPopupBodyWidth;
+  }
+  /*
+    Temporary hack for FOM's legacy form field theme:
+    Ensure enough vertical space that certain element popups ending with a dropdown
+    (usually 1 or 2 text fields followed by a "target" <select>) size properly, so that the
+    absolute-positioned dropdown overlay does not vanish into the scrollable area below the body
+    of the popup. E.g. scale selector, image export.
+   */
+  min-height: 520px;
+}
+
+.popup.new-instance-select {
+  min-width: max($popupModalWidth, $elementPopupWidth);
+  width: 70%;
+}
+
+
+
+
+// ----------------------------------------------- NEW/EDIT APPLICATION
+.applicationTabContainer{
+  margin-bottom:$space;
+}
+.containerBaseData{
+  $height: 200px;
+  $width: 200px;
+
+  // screen shot holder
+  .screenshot_img{
+    width:200px;
+    height:200px;
+    margin: 29px 29px; // HACK: same as line-height of first label in application base data...
+    position: relative;  // for absolute .delete button
+
+    box-sizing: content-box;
+    border: 1px solid #c0c0c0;
+    background-color: #f9f9f9;
+    display: table;
+
+    overflow: hidden;
+
+    img {
+      display: block;
+    }
+    .iconAppDefault {
+      display: none;
+    }
+    &.default {
+      img {
+        display: none;
+      }
+      .iconAppDefault {
+        display: inline-block;
+      }
+    }
+    &.default{
+      border: 1px solid #a2a2a2;
+      background-color:#404040;
+    }
+
+    .iconAppDefault{
+      font-style: normal;
+      font-size: 60px;
+      color:lighten($darkFontColor, 10%);
+    }
+
+    div.cell_edit{
+      position: relative;
+      .delete{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+        display: table-cell;
+        vertical-align:middle;
+        text-align: center;
+        padding: 0;
+        margin:0;
+        height: 200px;
+        width: 200px;
+
+        img {
+         max-height: 100%;
+         max-width: 100%;
+         width: auto;
+         height: auto;
+         margin: 0 auto;
+        }
+      }
+  }
+
+  textarea, input, .dropdown{min-width: 300px;}
+  textarea{height:100px;}
+  .messageBox {
+    margin: 23px 0 0 1em;
+  }
+}
+
+.containerExchange {
+  border: 1px solid #c0c0c0;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.popup{
+  .popupSubContent{
+    overflow: visible;
+    .labelInput, .input{float:left;}
+  }
+}
+
+/**
+  Used for both elements and layersets. NOT a .tableCore. .tableCore remains weird and unfixable
+  because some of its weirdness is relied upon in FOM-generated markup for users, groupsetc
+ */
+.application-component-table {
+  width: 100%;
+  margin:$space 0;
+  thead {
+    border-bottom: solid 5px darken($contentColor, 15%);
+  }
+  th {
+    font-weight:normal;
+  }
+  tr.ui-sortable-handle {
+    cursor: move;
+    &:hover{
+      background-color:darken($contentColor, 3%);
+    }
+    &.ui-sortable-helper {
+      background-color:darken($contentColor, 4.8%);
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: solid 1px darken($contentColor, 10%);
+      vertical-align: top;
+
+      >td:first-child {
+        // indent body row a bit vs first thead > th
+        padding-left: $space/2;
+      }
+      td {
+        // enforce a bit of space between cells, INCLUDING the very last
+        // cell (to mirror the "indent inwards" style of the first cell)
+        padding-right: $space/2;
+      }
+    }
+  }
+  tr {
+    height:30px;
+  }
+  .iconColumn {
+    // indent .iconColumn inwards even in thead, to line up with tbody > tr > td.iconColumn
+    padding-right: $space / 2;
+    text-align: right;
+  }
+  .iconColumn, .idColumn {
+    white-space: nowrap;
+  }
+}
+
+// To prevent horizontal collapsse in drag-and-drop transit, .layersetTable and .elementsTable both need certain
+// cells to have forced expansion
+.elementsTable {
+  .typeColumn, .titleColumn {width: 49%;}
+
+  .placeholderRow{height:$space;}
+}
+
+.layersetTable{
+  .titleColumn {
+    width: 99%;
+  }
+}
+
+
+// ------------------------------------------------------------- LAYOUT
+.checkContainer{
+  color:$middleFontColor;
+  display: block;
+  margin-bottom: $space/2;
+  background-color: $contentColor;
+  padding:5px $space/2 5px $space/2;
+  border:solid 1px white;
+  @include border-radius($radius);
+
+  &:hover{
+    background-color: white;
+    border:solid 1px darken(white, 15%);
+  }
+}
+.regionProperties{
+  .radioWrapper{margin-left: $space/2;}
+  label {display:none;}
+  .iconRadio{@include opacity(.3);@extend .iconCheckbox}
+  .iconRadioActive{@include opacity(1);@extend .iconCheckbox}
+  .iconRadiotabs{@include opacity(.3);@extend .iconTabActive}
+  .iconRadiotabsActive{@include opacity(1);@extend .iconTabActive}
+  .iconRadioaccordion{@include opacity(.3);@extend .iconBars}
+  .iconRadioaccordionActive{@include opacity(1);@extend .iconBars}
+  // FOM's idea of a radio group is a group of inline-display divs with float: left;
+  // Let's fix that
+  div {
+    float: none;
+  }
+}
+
+
+
+
+
+// ------------------------------------------------------------- LAYERS
+.layersetForm{
+  .labelInput{width:40px;float:left;}
+}
+
+.containerCustomCss {
+  .inputWrapper {
+    width: 100%;
+  }
+}

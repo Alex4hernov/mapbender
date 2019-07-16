@@ -1,0 +1,21 @@
+{
+    "name": "mapbender/coordinates-utility",
+    "description": "Transform coordinates in different SRS. Navigate to coordinates on the map.",
+    "keywords": ["mapbender","coordinates","search","navigate"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {"name": "Svitlana Aliferova"}
+    ],
+    "require": {
+        "php": ">=5.5.4"
+    },
+    "autoload": {
+        "psr-4": {"Mapbender\\CoordinatesUtilityBundle\\": "."}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

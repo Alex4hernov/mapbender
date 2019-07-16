@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mapbender - mapbender_test</title>
+    <meta name="description" content="Mapbender 3" />
+        <script language="JavaScript">
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        && !(/Firefox/i.test(navigator.userAgent))
+        ) {
+            var scaleFactor = 0.7;
+            var density = "240dpi";
+            document.write('<meta name="viewport" content="width=device-width; initial-scale='+scaleFactor+'; maximum-scale='+scaleFactor+'; minimum-scale='+scaleFactor+' user-scalable=no;target-densityDpi='+density+'"/>');
+        }
+    </script>
+            <link rel="stylesheet" type="text/css" href="/mapbender/components/cookieconsent/build/cookieconsent.min.css"/>
+    <link rel="shortcut icon" href="/mapbender/favicon.png" />
+      <link rel="stylesheet" href="/mapbender/app.php/application/mapbender_test/assets/css"/>
+</head>
+<body class="">
+        <div id="templateWrapper" class="templateWrapper sidePaneOpened">
+          <div class="logoContainer">
+                  <img class="logo" height="40" src="/mapbender/bundles/mapbendercore/image/logo_mb3.png"/>
+              </div>
+    
+        <ul id="toolbar" class="toolBar itemsRight top">
+                  <li class="toolBarItem">  <span id="36"
+        data-group=""
+        title="Layer tree"
+        class="mb-button">
+        <span class="iconBig icon-layer-tree"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="37"
+        data-group="featureinfo"
+        title="FeatureInfo"
+        class="mb-button">
+        <span class="iconBig icon-feature-info"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="38"
+        data-group=""
+        title="Print client"
+        class="mb-button">
+        <span class="iconBig iconPrint"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="39"
+        data-group=""
+        title="Image Export"
+        class="mb-button">
+        <span class="iconBig icon-image-export"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="40"
+        data-group=""
+        title="Legend"
+        class="mb-button">
+        <span class="iconBig icon-legend"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="41"
+        data-group=""
+        title="Loads a WMS via the getCapabilities-Request"
+        class="mb-button">
+        <span class="iconBig iconWms"></span>
+          </span>
+</li>
+                  <li class="toolBarItem"><span id="42" class="mb-gpsButton iconBig iconGps" title="Renders a button to show the GPS Position"></span>
+</li>
+                  <li class="toolBarItem">  <span id="43"
+        data-group="rulers"
+        title="line"
+        class="mb-button">
+        <span class="iconBig icon-line-ruler"></span>
+          </span>
+</li>
+                  <li class="toolBarItem">  <span id="44"
+        data-group="rulers"
+        title="area"
+        class="mb-button">
+        <span class="iconBig icon-area-ruler"></span>
+          </span>
+</li>
+                  <li class="toolBarItem"><span id="45" class="mb-aboutButton iconAbout iconBig" title="about"></span>
+</li>
+                  <li class="toolBarItem">  <span id="46"
+        data-group=""
+        title="Coordinates utility"
+        class="mb-button">
+        <span class="iconBig iconGpsTarget"></span>
+          </span>
+</li>
+            </ul>
+    
+            
+    <div id="content" class="contentPane">
+                  <div class="mb-element mb-element-map" id="47"></div>
+
+          <div id="48" class="mb-element mb-element-zoombar right-top"><div class="pan"><span class="panUp iconTop" title="Pan up"></span><span class="panRight iconRight" title="Pan right"></span><span class="panDown iconDown" title="Pan down"></span><span class="panLeft iconLeft" title="Pan left"></span></div><ul class="toolPane"><li class="history"><span class="historyPrev iconPrev" title="Go back"></span><span class="historyNext iconNext" title="Go forward"></span></li><li class="zoomBox"><span class="iconZoomSelect iconBig" title="Zoom by box"></span></li><li class="zoomWorld"><span class="iconZoomMin iconBig" title="Zoom by world"></span></li><li class="zoomSlider"><div class="iconZoomIn iconBig" title="Zoom in"></div><ul class="zoomSliderLevels"></ul><div class="iconZoomOut iconBig" title="Zoom out"></div></li></ul></div>
+          <div id="49" class="mb-element mb-element-legend" title="Legend">
+  <div class="legends"></div>
+</div>
+
+          <div id="50" class="mb-element mb-element-featureinfo hidden" data-title="FeatureInfo">
+    <div id="js-error-featureinfo" class="error hidden">No feature info layer exists.</div>
+    <div class="tabContainer js-content-parent">
+        <ul class="tabs js-header-parent">
+            <li id="" class="tab js-header js-header-content" data-idname="tab"></li>
+        </ul>
+        <div id="" class="container js-content js-content-content" data-idname="container"></div>
+    </div>
+</div>
+
+          <div id="51" class="mb-element mb-element-wmsloader" title="WMS loader">
+    <p class="description">Example: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS</p>
+    <br>
+    <label class="labelInput" for="loadWmsUrl">Service URL:</label>
+    <div class="inputWrapper">
+        <input name="loadWmsUrl" class="input url" type="text" />
+    </div>
+    <br>
+    <label class="labelInput" for="loadWmsUser">User:</label>
+    <div class="inputWrapper">
+        <input name="loadWmsUser" class="input url" type="text" />
+    </div>
+    <br>
+    <label class="labelInput" for="loadWmsPass">Password:</label>
+    <div class="inputWrapper">
+        <input name="loadWmsPass" class="input url" type="password" />
+    </div>
+</div>
+
+          <div id="52" class="mb-element mb-element-imageexport" title="Image export">
+  <form action="/mapbender/app.php/application/mapbender_test/element/52/export" method="post" target="">
+  <p>Choose Export Format</p>
+  <input type="radio" value="png" name="imageformat" checked>PNG<br>
+  <input type="radio" value="jpeg" name="imageformat">JPG
+    <div class="hidden -fn-hidden-fields">
+    </div>
+    <div class="hidden">
+      <input type="submit" class="-fn-submit"/>
+    </div>
+  </form>
+</div>
+
+          <div id="53" class="mb-element mb-element-printclient" title="Print client">
+    
+<form action="/mapbender/app.php/application/mapbender_test/element/53/print" method="post" target="_blank">
+                    
+    <label class="labelInput">Template</label>
+    <div class="dropdown">
+        <select name="template" class="hiddenDropdown">
+                            <option value="a4portrait">A4 Portrait</option>
+                            <option value="a4landscape">A4 Landscape</option>
+                            <option value="a3portrait">A3 Portrait</option>
+                            <option value="a3landscape">A3 Landscape</option>
+                    </select>
+        <div class="dropdownValue iconDown"></div>
+        <ul class="dropdownList"></ul>
+    </div>
+
+    <label class="labelInput">Quality</label>
+    <div class="dropdown">
+        <select name="quality" class="hiddenDropdown">
+                            <option value="72">Draft (72dpi)</option>
+                            <option value="288">Document (288dpi)</option>
+                    </select>
+        <div class="dropdownValue iconDown"></div>
+        <ul class="dropdownList"></ul>
+    </div>
+
+    <label class="labelInput">Scale</label>
+    <div class="dropdown">
+        <select name="scale_select" class="hiddenDropdown">
+                            <option value="500">1:500</option>
+                            <option value="1000">1:1000</option>
+                            <option value="5000">1:5000</option>
+                            <option value="10000">1:10000</option>
+                            <option value="25000">1:25000</option>
+                            <option value="50000">1:50000</option>
+                    </select>
+        <div class="dropdownValue iconDown"></div>
+        <ul class="dropdownList"></ul>
+    </div>
+
+            <label class="labelInput" for="rotation">Rotation</label>
+        <input class="input" type="text" name="rotation" value="0"/>
+ 
+        
+                                <div class="checkWrapper left iconCheckbox iconCheckboxActive " data-icon="iconCheckbox">
+            <input class="checkbox" type="checkbox" name="printLegend" value="1" checked="checked">
+        </div>
+        <label class="labelCheck">Print legend</label>
+        
+    <div class="hidden -fn-hidden-fields"></div>
+    <input type="submit" style="display: none"/>
+    <input type="button" class="button printSubmit hidden" value="Print"/>
+</form>
+</div>
+
+          <div class="mb-element mb-element-lineruler" id="54" title="line"></div>
+
+          <div class="mb-element mb-element-arearuler" id="55" title="area"></div>
+
+          <div id="56" class="mb-element mb-element-scaleline smallText">
+  <div class="scaleBorder"></div>
+</div>
+          <div id="57" class="mb-element mb-element-layertree hidden" data-title="Layer tree">
+  <li class="hidden leave showLeaves" data-state="" data-title="">
+    <div class="leaveContainer">
+      <span class="layer-spinner"></span>
+      <span class="layer-state"></span>
+      <span class="iconFolder" title="Sublayers open/close"></span>
+      <div class="checkWrapper iconCheckbox sourceVisibilityWrapper" title="Show sources">
+        <input class="layer-selected checkbox" type="checkbox" name="sourceVisibility">
+      </div>
+      <div class="iconOk selectAll" title="Show all layers"></div>
+      <div class="checkWrapper iconCheckbox selectedWrapper" title="Visibility on/off">
+        <input class="layer-selected checkbox" type="checkbox" name="selected">
+      </div>
+      <div class="checkWrapper featureInfoWrapper" title="Featureinfo on/off" data-icon-on="iconInfoActive" data-icon-off="iconInfo">
+        <input class="layer-info checkbox" type="checkbox" name="info"/>
+      </div>
+      <span class="layer-title labelCheck"></span>
+          </div>
+    <ul id="list-first" class="layers"></ul>
+  </li>
+    <ul id="list-root" class="layers" ></ul>
+</div>
+
+          <div id="58" class="mb-element mb-element-overview">
+    <div id="mb-element-overview-map" class="overviewContainer"></div>
+    <div class="toggleOverview"></div>
+</div>
+
+          <div id="59" class="mb-element mb-element-coordinatesutility" title="Coordinates utility">
+
+    <div class="block coordinates-extern">
+        <p>Coordinate system</p>
+
+        <div class="dropdown" title="Coordinate system">
+            <select class="hiddenDropdown srs"></select>
+            <div class="dropdownValue iconDown"></div>
+            <ul class="dropdownList"></ul>
+        </div>
+
+        <div class="input-to-clipboard">
+            <input class="input input-coordinate" type="text" title="Transformed coordinates" value=""/>
+            <div class="icon iconBig copyClipBoard" title="Copy to clipboard"></div>
+        </div>
+
+    </div>
+
+    <div class="block coordinates-intern">
+        <p>Coordinate in map reference system</p>
+        <div class="input-to-clipboard">
+            <input class="input map-coordinate" type="text" title="Coordinate in map reference system (read only)" readonly="true" value=""/>
+            <div class="icon iconBig copyClipBoard" title="Copy to clipboard"></div>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <span class="button coordinate-search left hidden">Coordinate search</span>
+        <span class="button center-map right">Center map</span>
+    </div>
+</div>
+
+          </div>
+
+        <ul id="footer" class="toolBar itemsRight bottom">
+                  <li class="toolBarItem"><span id="60" class="mb-element mb-element-activityindicator iconActivity right-bottom" title="background activity"></span></li>
+                  <li class="toolBarItem"><div id="61" class="mb-element mb-element-coordsdisplay right-bottom">
+            <span class="iconCoordinates"></span>
+        <span class="display-area"></span>
+</div>
+</li>
+                  <li class="toolBarItem"><div id="62" class="mb-element mb-element-srsselector dropdown" title="The spatial reference system selector changes the map&#039;s spatial reference system">
+  <select class="hiddenDropdown" id="srsselector"></select>
+  <div class="dropdownValue iconDown"></div>
+  <ul class="dropdownList"></ul>
+</div>
+</li>
+                  <li class="toolBarItem"><div id="63" class="mb-element mb-element-scaleselector dropdown" title="Displays and changes a map scale">
+  <select class="hiddenDropdown"></select>
+  <div class="dropdownValue iconDown"></div>
+  <ul class="dropdownList"></ul>
+</div>
+</li>
+                  <li class="toolBarItem">  <a id="64" target="_blank"
+     class="mb-button"
+     href="https://www.openstreetmap.org/copyright" title="© OpenStreetMap contributors">
+            <span>© OpenStreetMap contributors</span>
+      </a>
+</li>
+            </ul>
+      </div>
+
+<script src="/mapbender/components/joii/dist/joii.min.js"></script>
+<script src="/mapbender/components/jquery/jquery.min.js"></script>
+<script src="/mapbender/components/jquery-ui/jquery-ui.min.js"></script>
+    
+
+  <script type="text/javascript" src="/mapbender/app.php/application/mapbender_test/assets/trans"></script>
+    
+
+  <script type="text/javascript" src="/mapbender/app.php/application/mapbender_test/assets/js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.mb-element-overview {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+
+  .toggleOverview {
+    $buttonFirstColor: #6fb536;
+    $buttonSecondColor: #5fa229;
+
+    padding: 0 6px;
+    color: $lightFontColor;
+    background-color: $buttonFirstColor;
+
+    @extend .iconClose;
+    @extend .buttonCore;
+    @include border-radius($radius);
+  }
+
+  .olMap, .ol-overviewmap-map {
+    background-color: white;
+    @include transition(width .2s linear);
+    .ol-viewport, .olMapViewport {
+      border: 1px solid $thirdColor;
+    }
+  }
+  &.closed {
+    .olMap {
+      width: 0 !important;
+    }
+    .toggleOverview {
+      @extend .iconOpen;
+    }
+  }
+
+  &.right-top .toggleOverview {
+    @include absolute(0 '' '' -25px);
+  }
+  &.left-top .toggleOverview {
+    @include absolute(0 -25px '' '');
+  }
+  &.right-bottom .toggleOverview {
+    @include absolute('' '' 0 -25px);
+  }
+  &.left-bottom .toggleOverview {
+    @include absolute('' -25px 0 '');
+  }
+}
+
+.olControlOverviewMapExtentRectangle, .ol-overviewmap-box {
+  overflow: hidden;
+  cursor: move;
+  border: 2px solid $firstColor;
+}
+
+.olControlOverviewMapRectReplacement {
+  @extend .iconTarget;
+  cursor: move;
+}

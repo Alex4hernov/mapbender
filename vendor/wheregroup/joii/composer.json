@@ -1,0 +1,35 @@
+{
+    "name": "wheregroup/joii",
+    "type": "component",
+    "description": "Javascript Object Inheritance Implementation",
+    "homepage":  "http://joii.harold.info",
+    "license": "MIT",
+    "keywords": [
+      "javascript",
+      "class",
+      "interface",
+      "enum",
+      "enumerator",
+      "extends",
+      "visibility",
+      "private",
+      "public",
+      "protected",
+      "joii",
+      "inheritance",
+      "oop"
+    ],
+    "extra": {
+        "component": {
+          "scripts": ["dist/joii.min.js"],
+          "files": ["dist/joii.js"]
+        }
+    },
+    "require":{
+      "robloach/component-installer": "0.x"
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "web/assets"
+    }
+}

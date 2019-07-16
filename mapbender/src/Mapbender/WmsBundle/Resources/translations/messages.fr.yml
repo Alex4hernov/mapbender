@@ -1,0 +1,235 @@
+mb:
+  wms:
+    wmsloader:
+      dialog:
+        label:
+          example: Exemple
+          wmsurl: 'URL du service'
+          wmsuser: 'Nom d''utilisateur'
+          wmspass: 'Mot de passe'
+        btn:
+          cancel: Annuler
+          load: Charger
+      error:
+        url: 'WMSLoader: Impossible de charger les ''WMS capabilities''! L''URL est invalide.'
+        service: 'WMSLoader: Le service %service% n''est pas supporté!'
+        operation: 'WMSLoader: L''opération %operation% n''est pas supportée!'
+        version: 'WMSLoader: La version %version% du service WMS n''est pas supportée!'
+        load: 'WMSLoader: ''Impossible de chrager les WMS capabilities''!'
+      repo:
+        macros:
+          label:
+            formats: Formats
+        view:
+          title:
+            wms: WMS
+          label:
+            backtoservicelist: 'Retour à la liste des services'
+            metadata: Metadonnées
+            contact: Contact
+            details: Détails
+            layers: Couches
+            title: Titre
+            name: Nom
+            version: Version
+            originurl: 'URL d''origine'
+            abstract: Résumé
+            onlineresource: 'Ressource en ligne'
+            exceptionformats: 'Formats d''exception'
+            fees: Frais
+            accessconstraints: 'Contraintes d''accès'
+            person: Personne
+            organization: Organisation
+            position: Position
+            telephone: Téléphone
+            facsimile: Fax
+            email: Courriel
+            address: Adresse
+            addresstype: 'Type d''adresse'
+            city: Ville
+            state: État/Province
+            postcode: 'Code Postal'
+            country: Pays
+          message:
+            cautionscalehint: 'Attention: Le calcul de l''échelle est potentiellement limité par la résolution de ScaleHint dans le service WMS version 1.1.1'
+        instance:
+          title:
+            wmsinstance: 'Instance WMS'
+          btn:
+            save: Sauvegarder
+            cancel: Annuler
+          label:
+            originurl: 'URL d''origine'
+            visible: Visible
+            basesource: Fond de carte
+            proxy: Proxy
+            transparency: Transparence
+            tiled: Tuilé
+            title: Titre
+            minsc: Minsc
+            maxsc: Maxsc
+            active: Active
+            select: Sélectionner
+            info: Info
+            toggle: Basculer
+            reorder: Réorganiser
+            allow: permettre
+            'on': 'on'
+            save2: Sauvegarder
+            cancel2: Annuler
+            ratio: 'BBOX factor'
+            buffer: 'Tampon de la tuile'
+          vendorspecific:
+            label: 'Vendor specific'
+        preview:
+          title:
+            servicerepository: 'Répertoire du service'
+          label:
+            load: Charger
+        layer:
+          label:
+            name: Nom
+            name: Nom
+            title: Titre
+            abstract: Résumé
+            queryable: Queryable
+            cascaded: Cascaded
+            opaque: Opaque
+            nosubset: NoSubset
+            fixedwidth: FixedWidth
+            fixedheight: FixedHeight
+            latlonbounds: LatLonBounds
+            boundingbox: BoundingBox
+            srs: SRS
+            styles: Styles
+            legendurl: 'URL de la légende'
+            stylesheeturl: 'URL du stylesheet'
+            styleurl: 'URL du style'
+            scale: Échelle
+            min: Min
+            max: Max
+            scalehint: Scalehint
+            attribution: Attribution
+            onlineresource: 'Online Resource'
+            logourl: 'URL du logo'
+            identifier: Identifier
+            authority: Authorité
+            url: URL
+            value: Valeur
+            metadataurl: 'URL des métadonnées'
+            dimension: Dimension
+            extent: Étendue
+            dataurl: 'URL des données'
+            featurelisturl: 'URL du featurelist'
+        instancelayerform:
+          label:
+            layerstitle: 'Titre de la couche'
+            minscale: Minscale
+            maxsclase: Maxsclase
+            active: active
+            allowselecttoc: 'Permettre la sélection en cliquant'
+            selectedtoc: 'Sélectionné en cliquant'
+            allowinfotoc: 'Permettre le FeatureInfo en cliquant'
+            infotoc: 'FeatureInfo en cliquant'
+            allowtoggletoc: 'Permettre le basculement'
+            toggletoc: 'Basculer en cliquant'
+            allowreordertoc: 'Permettre la réorganisation en cliquant'
+            moreinfo: 'Plus d''informations'
+            id:
+              title: ID
+              description: 'Le Id de l''instance de la couche sous la forme de: SourceId-SourceLayerId/InstanceId-InstanceLayerId'
+            layersname: 'Nom de la couche'
+            style: Style
+        new:
+          label:
+            addservice: 'Ajouter un service'
+        instancelayer:
+          title:
+            servicerepository: 'Répertoire du service'
+          label:
+            wmsinstancelayers: 'Couches de l''instance WMS'
+          btn:
+            save: Sauvegarder
+        form:
+          label:
+            ogcwms: 'OGC WMS'
+            onlyvalid: 'Valide seulement'
+            serviceurl: 'URL du service'
+            username: 'Nom d''utilisateur'
+            password: 'Mot de passe'
+            load: Charger
+            cancel: Annuler
+      class:
+        title: 'Chargeur de WMS'
+        description: 'Charge un service WMS via une requête ''getCapabilities'''
+      tag:
+        wms: wms
+        loader: loader
+      admin:
+        label:
+          autoopen: 'Ouverture automatique'
+          splitlayers: 'Séparer les couches'
+          declarative: 'Use declarative'
+    repository:
+      parser:
+        couldnotparse: 'Impossible d''analyser CapabilitiesDocument'
+        not_supported_document: 'Le CapabilitiesDocument n''est pas supporté'
+        not_supported_version: 'La version du service WMS n''est pas supportée'
+        not_valid_dtd: 'Un document WMS est invalide (DTD).'
+        not_valid_xsd: 'Un document WMS est invalide (XSD).'
+    metadata:
+      section:
+        common:
+          _title: Commun
+          title: Titre
+          name: Nom
+          version: Version
+          originUrl: 'URL d''origine'
+          description: Description
+          onlineResource: OnlineResource
+          exceptionFormats: 'Formats d''exceptions'
+        useconditions:
+          _title: 'Conditions d''utilisation'
+          fees: Frais
+          accessconstraints: 'Contraintes d''accès'
+        contact:
+          _title: Contact
+          person: Personne
+          position: Position
+          organization: Organisation
+          voiceTelephone: Téléphone
+          facsimileTelephone: Fax
+          electronicMailAddress: Courriel
+          address: Adresse
+          addressType: 'Type d''adresse'
+          addressCity: Ville
+          addressStateOrProvince: 'État ou province'
+          addressPostCode: 'Code postal'
+          addressCountry: Pays
+        items:
+          _title: Couche
+          title: Titre
+          name: Nom
+          srs: SRS
+          bbox: BoundingBox
+    repo:
+      instance:
+        label:
+          dimensions: Dimensions
+    dimhandler:
+      class:
+        title: 'Prise en charge des dimensions'
+        description: 'DimensionsHandler groupe and fait appel aux instances supportant les dimensions'
+      tag:
+        dimension: dimension
+        handler: handler
+    dimensionsets:
+      no_dimension: 'Aucune dimension'
+  wmc:
+    wmsloader:
+      class:
+        title: 'Chargeur WMS'
+        description: 'Ouvre une fenêtre dans laquelle un service WMS peut être chargé avec une requête ''getCapabilities'''
+      tag:
+        wms: wms
+        loader: loader

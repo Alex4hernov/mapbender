@@ -1,0 +1,167 @@
+{
+    "name": "wheregroup/mapbender3-starter",
+    "description": "Mapbender",
+    "type": "project",
+    "license": "MIT",
+    "version": "3.0.8.1",
+    "homepage": "http://www.mapbender.org",
+    "support": {
+        "email":        "mapbender@osgeo.org",
+        "issues":       "https://github.com/mapbender/mapbender/issues",
+        "source":       "https://github.com/mapbender/mapbender-starter",
+        "docs":         "http://doc.mapbender.org/",
+        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "twitter":      "https://twitter.com/mapbender",
+        "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
+    },
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "predis/predis": "~1.0",
+        "satooshi/php-coveralls": "~0.6",
+        "phpunit/phpunit-selenium": "^2.0",
+        "facebook/webdriver": "1.1.*",
+        "phing/phing": "2.*",
+        "phantomjs/phantomjs": "1.x"
+    },
+    "require": {
+        "php": ">=5.3.9",
+        "symfony/symfony": "2.8.x",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "1.x",
+        "twig/extensions": "1.x",
+        "symfony/assetic-bundle": "2.x",
+        "symfony/swiftmailer-bundle": "2.3.x",
+        "symfony/monolog-bundle": "^3",
+        "sensio/distribution-bundle": "~4.0",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "2.3.x",
+
+        "incenteev/composer-parameter-handler": "~2.0",
+
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "components/jquery": "^1.11.2",
+
+        "mnsami/composer-custom-directory-installer": "1.0.*",
+
+        "mapbender/fom": "^3.0.6.0",
+        "mapbender/mapbender": "^3.0.8",
+        "mapbender/owsproxy": "^3.0.6",
+        "mapbender/digitizer": "^1.0",
+
+        "mapbender/coordinates-utility": "^1.0.2",
+        "components/font-awesome": "^4.0",
+        "wheregroup/cookieconsent": "dev-master"
+    },
+    "scripts": {
+        "build-bootstrap": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        ],
+        "post-install-cmd": [
+            "ComposerBootstrap::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "ComposerBootstrap::installAssets",
+            "ComposerBootstrap::prepareBinaries",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
+        "post-update-cmd": [
+            "ComposerBootstrap::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "ComposerBootstrap::installAssets",
+            "ComposerBootstrap::prepareBinaries",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
+        "update-assets":[
+            "ComposerBootstrap::installAssets",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
+        "docs": [
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "gen-user-docs": [
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "clean": [
+            "ComposerBootstrap::clearCache"
+        ],
+        "version": [
+            "ComposerBootstrap::displayVersion"
+        ],
+        "project-name": [
+            "ComposerBootstrap::displayProjectName"
+        ],
+        "init-example": [
+            "ComposerBootstrap::checkConfiguration"
+        ],
+        "drop-and-rebuild-database": [
+            "ComposerBootstrap::rebuildDatabase"
+        ],
+        "install-hard-copy-assets": [
+            "ComposerBootstrap::installHardCopyAssets"
+        ],
+        "install-sym-link-assets": [
+            "ComposerBootstrap::installSymLinkAssets"
+        ],
+        "dist":[
+            "ComposerBootstrap::distribute"
+        ],
+        "build": [
+            "ComposerBootstrap::distribute",
+            "ComposerBootstrap::build"
+        ],
+        "log": [
+            "ComposerBootstrap::generateChangeLog"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "web/components",
+        "component-baseurl": "/components",
+        "platform": {
+            "php": "5.5.38"
+        },
+        "archive-dir": "../dist",
+        "archive-format": "tar.gz",
+        "optimize-autoloader": true,
+        "process-timeout": 600,
+        "preferred-install": {
+            "mapbender/*": "source"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
+        "symfony-assets-install": "symlink",
+        "installer-paths":{
+            "mapbender/": ["mapbender/mapbender"],
+            "fom/": ["mapbender/fom"],
+            "owsproxy/": ["mapbender/owsproxy"],
+            "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
+            "web/components/datatables/": ["datatables/datatables"]
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "phantomjs/phantomjs",
+                "type": "component",
+                "version": "1.8.2",
+                "dist": {
+                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantomjs/phantomjs-1.8.2-linux-x86_64.tar.bz2",
+                    "type": "tar"
+                },
+                "bin": [
+                    "bin/phantomjs"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+.tableCore{
+  width: 100%;
+  background-color:$contentColor;
+
+  td{
+    padding: 0px $space/2;
+  }
+  thead{border-bottom: solid 5px darken($contentColor, 15%);}
+  th{
+    padding:$space/4;
+    padding-left:$space/2;
+    font-weight:normal;
+    text-align: left;
+  }
+  tbody{
+    tr{
+      border-top: solid 1px darken($contentColor, 10%);
+      vertical-align: top;
+
+      &:hover{background-color:darken($contentColor, 3%);}
+    }
+  }
+  tr{height:30px;}
+  .iconColumn{
+    float:right;
+    display: table-cell !important; // defeat .icon^ rule...
+    padding-top:5px;
+    padding-right:$space/2;
+    vertical-align: top;
+  }
+}
+.table{
+  @extend .tableCore;
+
+  border:{
+    top:solid 3px $firstColor;
+    left:solid 1px $thirdColor;
+    right:solid 1px $thirdColor;
+    bottom:solid 1px $thirdColor;
+  }
+  // bootstrap introduces a border-bottom on .table>thead>tr>th. We don't do that (border is on thead itself),
+  // so revert it
+  >thead>tr>th {
+    border-bottom: none;
+  }
+}
+
+table {
+  td, th {
+    &.iconColumn {
+      // Poor .iconColumn catches some undesirable rules from the [class^="icon"] rule
+      // in libs/_icons.scss. Defeat those
+      display: table-cell !important;
+      vertical-align: inherit;
+    }
+  }
+}
+
+.permissionsTable{
+  $height:26px;
+
+  &.hidePermissions{display:none;}
+
+  tr{
+    border-bottom: solid 1px darken($contentColor, 10%);
+    &.new{
+      .labelInput, .iconGroup, .iconUser{color:green;}
+      background-color: #f0ffed;
+    }
+  }
+  th{cursor: pointer;padding:5px 0px;}
+  td{
+    padding:5px 0px;
+    .labelInput{width:150px;}
+    .input{display:none;}
+    .iconGroup:before, .iconUser:before{
+      text-align: center;
+      width:20px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+  .listFilterInput{
+    margin-bottom: 0;
+  }
+
+  .checkWrapper, .headTagWrapper{
+    width:56px;
+    height:$height;
+    line-height:$height;
+    text-align:center;
+    @include noUserSelect;
+    @include border-radius($radius);
+
+    &.active {
+      color:white;
+      &.view {
+        background-color: #8DCA35;
+      }
+      &.edit, &.delete, &.create {
+        background-color: #FFAB00;
+      }
+      &.operator, &.master, &.owner {
+        background-color: #FF702A;
+      }
+    }
+  }
+  .headTagWrapper.multi {
+    background-color:#c1c1c1;
+  }
+
+}
+.tableGroupsAndUsers{
+  border:{
+    top:solid 3px $firstColor;
+    left:solid 1px $thirdColor;
+    right:solid 1px $thirdColor;
+    bottom:solid 1px $thirdColor;
+  }
+  @include border-bottom-radius($radius);
+}

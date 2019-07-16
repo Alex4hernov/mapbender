@@ -1,0 +1,16 @@
+(function($) {
+
+$.widget("mapbender.mb{{ widgetName }}", {
+    options: {},
+
+    elementUrl: null,
+
+    _create: function() {
+        this.elementUrl = Mapbender.configuration.application.urls.element + '/' + this.element.attr('id') + '/';
+    },
+
+    _destroy: $.noop
+});
+
+})(jQuery);
+

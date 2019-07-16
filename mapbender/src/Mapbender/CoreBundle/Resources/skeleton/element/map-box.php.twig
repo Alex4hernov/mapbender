@@ -1,0 +1,38 @@
+<?php
+
+namespace {{ bundleNamespace }}\Element;
+
+use Mapbender\CoreBundle\Element\Button;
+
+class {{ className }} extends Button
+{
+    public static function getClassTitle()
+    {
+        return "{{ className }} - please give me a title";
+    }
+
+    public static function getClassDescription()
+    {
+        return "{{ className }} - please give me a description";
+    }
+
+    public function getAssets()
+    {
+        $allRefs = parent::getAssets();
+        $allRefs['js'][] = 'mapbender.element.{{ classNameLower }}.js';
+        return $allRefs;
+    }
+
+    public static function getDefaultConfiguration()
+    {
+        return array_replace(parent::getDefaultConfiguration, array(
+            'label' => true,
+            'icon' => 'iconAreaRuler',
+        ));
+    }
+
+    public function getWidgetName()
+    {
+        return 'mapbender.mb{{ classNameLower }}';
+    }
+}

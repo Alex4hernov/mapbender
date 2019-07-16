@@ -1,0 +1,255 @@
+mb:
+  application:
+    create:
+      success: Приложение создано.
+      failure:
+        create.directory: Невозможно создать директорию приложения.
+    save:
+      success: Приложение сохранено.
+      failure:
+        general: Произошла ошибка при сохранении приложения.
+        create.directory: Приложение было сохранено, но невозможно создать для него директорию.
+    remove:
+      success: Приложение удалено.
+      failure:
+        general: Невозможно удалить приложение.
+        already.removed:  Приложение уже удалено.
+        remove.directory: Не возможно создать директорию приложения.
+  layerset:
+    create:
+      success: Набор слоев создан.
+      failure:
+        unique.title: Такой заголовок уже используется.
+    remove:
+      success: Набор слоев удален.
+      failure: Произошла ошибка при удалении набора слоев.
+  source:
+    instance:
+      create:
+        success: Новый образец был создан, но его нужно отредактировать.
+  manager:
+    admin:
+      sources: Источники
+      source:
+        add: 'Добавить источник'
+        show_metadata: 'Показать метаданные'
+        delete: 'Удалить источник'
+        new:
+          add: 'Добавить источник'
+        valid: 'Источник действительный'
+        notvalid: 'Источник не действительный'
+        no_source: 'Нет доступного источника'
+        update: 'Обновить источник'
+        status:
+          ok: 'Источник OK'
+          toupdate: 'Источник больше не является текущим'
+          unreachable: 'Источник недоступен'
+      map:
+        max_extent: 'Макс. область'
+        start_extent: 'Начало области'
+      element:
+        delete:
+          title: 'Удалить элемент'
+          confirm: 'Вы действительно хотите удалить элемент?'
+        btn:
+          delete: Удалить
+          cancel: Отменить
+        requirements: 'Обязательные поля помечены темными метками, а необязательные - светлые.'
+        base_data: 'Базовые данные'
+        configuration: Конфигурация
+        title: Название
+        type: Тип
+        add: 'Добавить новый элемент в'
+        show_hide: 'Вкл/выкл элемент'
+        edit: 'Редактировать элемент'
+        no_element_added:
+          '': 'Элемент не добавлен'
+      zoombar:
+        draggable: Перетаскиваемый
+      filter:
+        source: 'Фильтр источников'
+        layerset: 'Фильтровать слои'
+        application: 'Фильтр приложений'
+        element: 'Фильтр элемент'
+      overview:
+        maximize: Максимизировать
+        fix: Закрепить
+      layerset:
+        add: 'Добавить слои'
+        title: Название
+        type: Тип
+        edit: 'Редактировать слои'
+        delete:
+          title: 'Удалить слои'
+          confirm: 'Вы действительно хотите удалить слои с названием <span class="italic">%layerset_title%</span>?'
+        id_description: 'Id в форме SourceId/InstanceId'
+        id: Id
+      instance:
+        add: 'Добавить образец'
+        show_hide: 'Вкл/выкл образец'
+        edit: 'Редактировать образец'
+        delete:
+          title: 'Удалить образец'
+          confirm: 'Do you really want to remove the instance with the title <span class="italic">%instance_title%</span>?'
+        no_instance_added: 'Образец не добавлен'
+        no_layer_added: 'Слой не добавлен'
+      template: Шаблон
+      application:
+        view: Обзор
+        edit:
+          title: 'Редактировать приложение'
+          base_data: 'Базовые данные'
+        layouts: 'Панели инструментов'
+        layersets: Слои
+        custom_css: CSS
+        security:
+          title: Безопасность
+          add_users_groups: 'Добавить пользователей и группы'
+          public: активированы
+        save: Сохранить
+        cancel: Отменить
+        view_this: 'Показать приложение'
+        duplicate: 'Создать копию приложения'
+        public:
+          on_off: 'Вкл/выкл публикацию приложения'
+        delete: 'Удалить приложение'
+        no_application: 'Нет доступных приложений'
+        new:
+          title: 'Новое приложение'
+          base_data: 'Базовые данные'
+        create_use: 'Заполните основную информацию при создании нового приложения, а затем используйте режим редактирования, чтобы добавить элементы и слои.'
+        btn:
+          create: Создать
+          cancel: Отменить
+        upload:
+          button: 'Выбрать файл:'
+          label: 'Файл не выбран'
+          tooltip: 'Нажмите, чтобы загрузить скриншот'
+        export:
+          addAcl: ACLs
+          addSources: Источники
+          btn:
+            export: Экспорт
+            cancel: Отменить
+        import:
+          addApplications: Приложения
+          addAcl: ACLs
+          addSources: Источники
+          btn:
+            import: Импорт
+            cancel: Отменить
+        title: Название
+        url:
+          title: 'URL заголовок'
+        description: Описание
+        template: Template
+      applications: Приложения
+    managerbundle:
+      applications: Приложения
+      new_application: 'Новое приложение'
+      sources: Источники
+      add_source: 'Добавить источник'
+      add_user_group: 'Добавить пользователей и группы'
+      acl_element: 'Acl элемент'
+      import_application: Импорт
+      export_application: Экспорт
+    element:
+      yaml:
+        message: 'Используйте <a class="linkButton" href="http://www.wikipedia.org/search-redirect.php?search=yaml&language=%locale%">YAML</a> Формат для описания конфигурации элемента..'
+    be:
+      element:
+        delete: 'Удалить элемент ''%element_title%'''
+    components:
+      popup:
+        add_element:
+          title: 'Добавить элемент'
+          btn:
+            ok: Ок
+            cancel: Отменить
+            back: Назад
+        edit_element:
+          title: 'Редактировать элемент'
+          btn:
+            ok: Обновить
+            cancel: Отменить
+        delete_element:
+          subtitle: элемент
+          title: 'Подтвердить удаление'
+          btn:
+            ok: Удалить
+            cancel: Отменить
+        add_edit_layerset:
+          title_edit: 'Редактировать слои'
+          title_add: 'Добавить слои'
+          btn:
+            ok: Ок
+            cancel: Отменить
+        delete_layerset:
+          title: 'Удалить слои'
+          btn:
+            ok: Удалить
+            cancel: Отменить
+        add_instance:
+          title: 'Выбрать источник'
+          btn:
+            cancel: Отменить
+        delete_instance:
+          title: 'Подтвердить удаления'
+          btn:
+            ok: Удалить
+            cancel: Отменить
+        element_acl:
+          btn:
+            cancel: Отменить
+            ok: Обновить
+            add: Добавить
+            back: Назад
+            remove: Удалить
+    template:
+      region:
+        tabs:
+          label: Вкладки
+        accordion:
+          label: Accordion
+    upload:
+      label_delete: 'Скриншот удален'
+    import:
+      application:
+        failed: 'Приложение не может быть импортировано.'
+      acl:
+        failed: 'ACL не импортируются.'
+      source:
+        failed: 'Источник не может быть импортирован.'
+  core:
+    admin:
+      button:
+        show_label: 'Показать отметку'
+      scaleselector:
+        show_label: 'Показать отметку'
+      corrdsdisplay:
+        label: 'Показать название отметки'
+      srsselector:
+        show_label: 'Показать отметкиу'
+      gpsposition:
+        show_label: 'Показать отметкиу'
+      element:
+        autostart: Автозапуск
+      about_dialog:
+        show_label: 'Показать надпись на кнопке'
+    element:
+      be:
+        button:
+          show_label: 'Показать отметку'
+    entity:
+      app:
+        screenshotfile:
+          error: 'Файл слишком большой (% uploadFileSize% байт). Допускается максимальный размер% MaxFileSize% байт.'
+          format_error: 'Этот формат не поддерживается!'
+          resolution:
+            error: 'Минимально возможное изображение должно быть равно или больше чем %screenshotHeight% х %screenshotWidth% пикселей. Загруженное Вами соответствует размеру в %uploadWidth% х %uploadHeighth%.'
+form:
+  manager:
+    admin:
+      application:
+        export:
+          application: Приложения

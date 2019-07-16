@@ -1,0 +1,2223 @@
+@import url("../../../../components/font-awesome/font-awesome-built.css");
+@import url("../../../../components/mapbender-icons/style.css");
+@import url("../../../../components/open-sans/open-sans.css");
+@import url("../../../../components/bootstrap/css/bootstrap.min.css");
+[class^="icon"], [class*=" icon"], .icon {
+  text-decoration: none;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  display: inline;
+  width: auto;
+  height: auto;
+  vertical-align: top; }
+  [class^="icon"]:hover, [class*=" icon"]:hover, .icon:hover {
+    text-decoration: none; }
+  [class^="icon"]:before, [class*=" icon"]:before, .icon:before {
+    margin-right: 0.25em; }
+
+.iconBig:before {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: top; }
+
+span.iconBig {
+  display: inline-block; }
+
+@-webkit-keyframes spin {
+   0% {
+    -webkit-transform: rotate(0deg); }
+   100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-moz-keyframes spin {
+   0% {
+    -moz-transform: rotate(0deg); }
+   100% {
+    -moz-transform: rotate(359deg); } }
+
+@keyframes spin {
+   0% {
+    transform: rotate(0deg); }
+   100% {
+    transform: rotate(359deg); } }
+.iconCheckbox:before, .regionProperties .iconRadio:before, .regionProperties .iconRadioActive:before {
+  content: "\f096";
+  font-family: FontAwesome; }
+
+.iconCheckboxActive:before {
+  content: "\f046";
+  font-family: FontAwesome; }
+
+.iconCheckboxHalf:before {
+  content: "\f147";
+  font-family: FontAwesome; }
+
+.iconRadio:before {
+  content: "\f10c";
+  font-family: FontAwesome; }
+
+.iconRadioActive:before {
+  content: "\f192";
+  font-family: FontAwesome; }
+
+.iconView:before {
+  content: "\f108";
+  font-family: FontAwesome; }
+
+.iconHelp:before {
+  content: "\f059";
+  font-family: FontAwesome; }
+
+.iconLinkButton:before {
+  content: "\f0da";
+  font-family: FontAwesome; }
+
+.iconDown:before {
+  content: "\f078";
+  font-family: FontAwesome; }
+
+.iconRight:before {
+  content: "\f054";
+  font-family: FontAwesome; }
+
+.iconLeft:before {
+  content: "\f053";
+  font-family: FontAwesome; }
+
+.iconTop:before {
+  content: "\f077";
+  font-family: FontAwesome; }
+
+.iconExpand:before {
+  content: "\f147";
+  font-family: FontAwesome; }
+
+.iconExpandClosed:before {
+  content: "\f196";
+  font-family: FontAwesome; }
+
+.iconMove:before {
+  content: "\f047";
+  font-family: FontAwesome; }
+
+.iconMenu:before {
+  content: "\f0c9";
+  font-family: FontAwesome; }
+
+.iconAbout:before {
+  content: "\f0c0";
+  font-family: FontAwesome; }
+
+.iconPrint:before {
+  content: "\f02f";
+  font-family: FontAwesome; }
+
+.iconGps:before {
+  content: "\f041";
+  font-family: FontAwesome; }
+
+.iconLayertree:before {
+  content: "\f0e8";
+  font-family: FontAwesome; }
+
+.iconLegend:before {
+  content: "\f00b";
+  font-family: FontAwesome; }
+
+.iconInfo:before {
+  content: "\f129";
+  font-family: FontAwesome; }
+
+.iconInfoActive:before {
+  content: "\f05a";
+  font-family: FontAwesome; }
+
+.iconSearch:before {
+  content: "\f002";
+  font-family: FontAwesome; }
+
+.iconWms:before, .iconOverview:before {
+  content: "\f0ac";
+  font-family: FontAwesome; }
+
+.iconWmcEditor:before {
+  content: "\f044";
+  font-family: FontAwesome; }
+
+.iconWmcLoader:before {
+  content: "\f07c";
+  font-family: FontAwesome; }
+
+.iconOpen:before {
+  content: "\f067";
+  font-family: FontAwesome; }
+
+.iconClose:before {
+  content: "\f068";
+  font-family: FontAwesome; }
+
+.iconActivity:before, .icon[data-state="running"]:before {
+  content: "\f110";
+  font-family: FontAwesome; }
+
+.iconCoordinates:before {
+  content: "\f05b";
+  font-family: FontAwesome; }
+
+.iconGpsTarget:before {
+  content: "\f05b";
+  font-family: FontAwesome; }
+
+.iconPrev:before {
+  content: "\f0e2";
+  font-family: FontAwesome; }
+
+.iconNext:before {
+  content: "\f01e";
+  font-family: FontAwesome; }
+
+.iconZoomSelect:before {
+  content: "\f00e";
+  font-family: FontAwesome; }
+
+.iconZoomMin:before {
+  content: "\f0ac";
+  font-family: FontAwesome; }
+
+.iconZoomIn:before {
+  content: "\f196";
+  font-family: FontAwesome; }
+
+.iconZoomOut:before {
+  content: "\f147";
+  font-family: FontAwesome; }
+
+.iconZoomLevel:before {
+  content: "\f10c";
+  font-family: FontAwesome; }
+
+.iconZoomLevelSelected:before {
+  content: "\f111";
+  font-family: FontAwesome; }
+
+.iconAreaRuler:before {
+  content: "\f125";
+  font-family: FontAwesome; }
+
+.iconFolder:before {
+  content: "\f07b";
+  font-family: FontAwesome; }
+
+.iconFolderActive:before {
+  content: "\f07c";
+  font-family: FontAwesome; }
+
+.iconTarget:before {
+  content: "\f05b";
+  font-family: FontAwesome; }
+
+.iconPoi:before {
+  content: "\f08d";
+  font-family: FontAwesome; }
+
+.iconImageExport:before {
+  content: "\f030";
+  font-family: FontAwesome; }
+
+.iconWarning:before, .icon[data-state="aborted"]:before {
+  content: "\f071";
+  font-family: FontAwesome; }
+
+.iconWarningCcl:before {
+  content: "\f06a";
+  font-family: FontAwesome; }
+
+.iconWarningSmpl:before {
+  content: "\f12a";
+  font-family: FontAwesome; }
+
+.iconEmail:before {
+  content: "\f0e0";
+  font-family: FontAwesome; }
+
+.iconTwitter:before {
+  content: "\f081";
+  font-family: FontAwesome; }
+
+.iconFacebook:before {
+  content: "\f082";
+  font-family: FontAwesome; }
+
+.iconGooglePlus:before {
+  content: "\f0d4";
+  font-family: FontAwesome; }
+
+.iconSketch:before {
+  content: "\f044";
+  font-family: FontAwesome; }
+
+.iconMore:before {
+  content: "\f0c9";
+  font-family: FontAwesome; }
+
+.iconClock:before, .icon[data-state="waiting"]:before {
+  content: "\f017";
+  font-family: FontAwesome; }
+
+.iconFile:before, .icon[data-state="new"]:before {
+  content: "\f016";
+  font-family: FontAwesome; }
+
+.iconBolt:before, .icon[data-state="error"]:before {
+  content: "\f0e7";
+  font-family: FontAwesome; }
+
+.iconStarO:before {
+  content: "\f006";
+  font-family: FontAwesome; }
+
+.iconBars:before, .regionProperties .iconRadioaccordion:before, .regionProperties .iconRadioaccordionActive:before {
+  content: "\f0c9";
+  font-family: FontAwesome; }
+
+.iconFileText:before {
+  content: "\f0f6";
+  font-family: FontAwesome; }
+
+.iconCancel:before {
+  content: "\f05c";
+  font-family: FontAwesome; }
+
+.iconCopyright:before {
+  content: "\f1f9";
+  font-family: FontAwesome; }
+
+.iconGroup:before {
+  content: "\f0c0";
+  font-family: FontAwesome; }
+
+.iconAdd:before {
+  content: "\f067";
+  font-family: FontAwesome; }
+
+.iconRemove:before {
+  content: "\f00d";
+  font-family: FontAwesome; }
+
+.iconOk:before, .tableUserGroups .iconCheckboxActive:before, .tableUserGroups .iconCheckbox:before, .tableUserGroups .regionProperties .iconRadio:before, .regionProperties .tableUserGroups .iconRadio:before, .tableUserGroups .regionProperties .iconRadioActive:before, .regionProperties .tableUserGroups .iconRadioActive:before, .icon[data-state="success"]:before {
+  content: "\f00c" !important;
+  font-family: FontAwesome; }
+
+.iconEdit:before {
+  content: "\f040";
+  font-family: FontAwesome; }
+
+.iconPublish:before {
+  content: "\f070";
+  font-family: FontAwesome; }
+
+.iconPublishActive:before {
+  content: "\f06e";
+  font-family: FontAwesome; }
+
+.iconAppDefault:before {
+  content: "\f03e";
+  font-family: FontAwesome; }
+
+.iconThumbsUp:before, .flashBox.success:before, .flashBox.warning:before {
+  content: "\f087";
+  font-family: FontAwesome; }
+
+.iconThumbsDown:before, .flashBox.error:before {
+  content: "\f088";
+  font-family: FontAwesome; }
+
+.iconGroup:before {
+  content: "\f0c0";
+  font-family: FontAwesome; }
+
+.iconUser:before {
+  content: "\f007";
+  font-family: FontAwesome; }
+
+.iconSettings:before {
+  content: "\f0ad";
+  font-family: FontAwesome; }
+
+.iconSignOut:before {
+  content: "\f08b";
+  font-family: FontAwesome; }
+
+.iconSignIn:before {
+  content: "\f090";
+  font-family: FontAwesome; }
+
+.iconMore:before {
+  content: "\f141";
+  font-family: FontAwesome; }
+
+.iconCopy:before {
+  content: "\f0c5";
+  font-family: FontAwesome; }
+
+.iconKey:before {
+  content: "\f084";
+  font-family: FontAwesome; }
+
+.iconTab:before {
+  content: "\f114";
+  font-family: FontAwesome; }
+
+.iconTabActive:before, .regionProperties .iconRadiotabs:before, .regionProperties .iconRadiotabsActive:before {
+  content: "\f07b" !important;
+  font-family: FontAwesome; }
+
+.iconReset:before {
+  content: "\f021";
+  font-family: FontAwesome; }
+
+.iconPlay:before {
+  content: "\f04b";
+  font-family: FontAwesome; }
+
+.iconStop:before {
+  content: "\f04d";
+  font-family: FontAwesome; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'mapbender-icons'; }
+
+.hover-highlight-effect, .iconBig:before, .iconSmall:before {
+  opacity: 0.6; }
+  .hover-highlight-effect:hover, .iconBig:hover:before, .iconSmall:hover:before {
+    opacity: 1.0; }
+
+.mb-element-coordinatesutility .copyClipBoard:before {
+  font-family: FontAwesome; }
+
+.elementForm .labelInput {
+  width: 70px;
+  margin-bottom: 10px; }
+.elementForm textarea {
+  height: 150px;
+  resize: none; }
+.elementForm select {
+  font-size: 12px;
+  padding-left: 5px; }
+.elementForm .input {
+  width: 100%; }
+.elementForm .dropdown {
+  min-width: 70%; }
+.elementForm .inputWrapper, .elementForm select, .elementForm .choiceExpandedSortable, .elementForm .collectionContainer {
+  width: 70%;
+  color: #858585; }
+  .elementForm .inputWrapper .validationMsgBox, .elementForm select .validationMsgBox, .elementForm .choiceExpandedSortable .validationMsgBox, .elementForm .collectionContainer .validationMsgBox {
+    min-width: 28%; }
+.elementForm .choiceExpandedSortable {
+  color: #858585;
+  display: inline-block;
+  border: solid 1px #c8c8c8;
+  background-color: #f9f9f9; }
+  .elementForm .choiceExpandedSortable .sortableItem {
+    padding: 0 0.4em;
+    cursor: move;
+    line-height: 21px; }
+    .elementForm .choiceExpandedSortable .sortableItem .checkWrapper, .elementForm .choiceExpandedSortable .sortableItem label {
+      line-height: inherit;
+      color: inherit;
+      margin: 0; }
+    .elementForm .choiceExpandedSortable .sortableItem label {
+      cursor: inherit;
+      width: 92%;
+      width: calc(100% - 13px - 2px);
+      padding-left: 0.2em; }
+    .elementForm .choiceExpandedSortable .sortableItem:hover {
+      background-color: #e0e0e0; }
+.elementForm .left > .labelCheck {
+  margin-right: 20px; }
+
+.wideLabelForm .labelInput {
+  width: 100px; }
+.wideLabelForm .inputWrapper, .wideLabelForm select, .wideLabelForm .choiceExpandedSortable, .wideLabelForm .collectionContainer {
+  width: calc(100% - 120px); }
+.wideLabelForm .dropdown {
+  min-width: calc(100% - 120px);
+  width: calc(100% - 120px); }
+
+.extraWideLabelForm .labelInput {
+  width: 120px; }
+.extraWideLabelForm .inputWrapper, .extraWideLabelForm select, .extraWideLabelForm .choiceExpandedSortable, .extraWideLabelForm .collectionContainer {
+  width: calc(100% - 140px); }
+.extraWideLabelForm .dropdown {
+  min-width: calc(100% - 140px);
+  width: calc(100% - 140px); }
+
+.collectionItem {
+  clear: both;
+  position: relative; }
+  .collectionItem .labelInput {
+    clear: both; }
+  .collectionItem textarea {
+    height: 100px;
+    margin-bottom: 20px; }
+
+.collectionRemove {
+  line-height: 28px;
+  position: absolute;
+  right: 31px;
+  top: -6px;
+  z-index: 1; }
+
+.elementFormLayerTree .collectionContainer {
+  border: solid 1px #c8c8c8;
+  background-color: #f9f9f9; }
+  .elementFormLayerTree .collectionContainer .collectionItem label {
+    margin-left: 5px;
+    display: inline; }
+  .elementFormLayerTree .collectionContainer .collectionItem .checkWrapper {
+    float: none; }
+  .elementFormLayerTree .collectionContainer .theme-settings {
+    text-align: right;
+    user-select: none; }
+    .elementFormLayerTree .collectionContainer .theme-settings > span {
+      display: inline-block;
+      text-align: left;
+      width: 1.5em; }
+    .elementFormLayerTree .collectionContainer .theme-settings .item-opened .iconCheckbox:before, .elementFormLayerTree .collectionContainer .theme-settings .item-opened .regionProperties .iconRadio:before, .regionProperties .elementFormLayerTree .collectionContainer .theme-settings .item-opened .iconRadio:before, .elementFormLayerTree .collectionContainer .theme-settings .item-opened .regionProperties .iconRadioActive:before, .regionProperties .elementFormLayerTree .collectionContainer .theme-settings .item-opened .iconRadioActive:before {
+      content: "\f07b" !important; }
+    .elementFormLayerTree .collectionContainer .theme-settings .item-opened .iconCheckboxActive:before {
+      content: "\f07c" !important; }
+
+.elementFormMap .labelInput {
+  width: 100px; }
+.elementFormMap .singleRow {
+  float: right;
+  width: calc(100% - 125px); }
+  .elementFormMap .singleRow .labelInput {
+    width: 40px;
+    margin-right: 5px; }
+  .elementFormMap .singleRow .inputWrapper {
+    min-width: 0;
+    width: 80px; }
+  .elementFormMap .singleRow .inputWrapper + .labelInput {
+    margin-left: 20px; }
+  .elementFormMap .singleRow:after {
+    content: '';
+    display: table-cell;
+    clear: both; }
+
+.elementFormPrintClient .section-label label {
+  width: 100%; }
+.elementFormPrintClient .quality-grid .labelInput {
+  width: 25px; }
+.elementFormPrintClient .quality-grid .inputWrapper {
+  float: right; }
+
+.listFilterServiceBoxes .col1 {
+  width: 60px; }
+.listFilterServiceBoxes .col2 {
+  margin-left: 60px;
+  min-height: 91px; }
+
+/**
+ * .box adds a border. If a fieldset has .box, that border appears at "strikethrough" height for the fieldset legend,
+ * which looks pretty bad. For this combination, remove the standard bottom border and minimize legend width to allow the
+ * border to at least fill the sides of the legend text.
+ */
+fieldset.box legend {
+  display: inline-block;
+  width: auto;
+  border-bottom: none; }
+
+.serviceContainer {
+  margin-bottom: 20px; }
+  .serviceContainer .labelText {
+    float: left; }
+
+.serviceMetaContainer .labelText {
+  float: none; }
+.serviceMetaContainer .metaText {
+  line-height: 16px;
+  margin-bottom: 5px;
+  text-align: justify;
+  padding-bottom: 5px; }
+.serviceMetaContainer .metaUrl {
+  word-wrap: break-word; }
+
+.serviceContactContainer .labelText {
+  width: 90px; }
+.serviceContactContainer .metaText {
+  margin-left: 100px; }
+
+.serviceServiceContainer .list, .serviceServiceContainer li, .serviceLayersContainer .list, .serviceLayersContainer li {
+  clear: both; }
+.serviceServiceContainer .list, .serviceLayersContainer .list {
+  border-left: dashed 1px #cccccc;
+  margin-bottom: 10px; }
+  .serviceServiceContainer .list.closed > li, .serviceLayersContainer .list.closed > li {
+    display: none; }
+  .serviceServiceContainer .list.closed > .openCloseTitle, .serviceLayersContainer .list.closed > .openCloseTitle {
+    display: block; }
+  .serviceServiceContainer .list li, .serviceLayersContainer .list li {
+    margin-left: 20px; }
+  .serviceServiceContainer .list ul.left li, .serviceLayersContainer .list ul.left li {
+    margin-left: 0; }
+    .serviceServiceContainer .list ul.left li .metaText, .serviceLayersContainer .list ul.left li .metaText {
+      margin-left: 0; }
+.serviceServiceContainer .labelText, .serviceLayersContainer .labelText {
+  width: 85px;
+  margin-right: 10px; }
+.serviceServiceContainer .openCloseTitle, .serviceLayersContainer .openCloseTitle {
+  color: #3f3f3f;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: -10px !important;
+  background-color: #f9f9f9;
+  padding-left: 5px;
+  height: 17px;
+  font-style: italic;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+  .serviceServiceContainer .openCloseTitle:before, .serviceLayersContainer .openCloseTitle:before {
+    font-style: normal; }
+  .serviceServiceContainer .openCloseTitle.iconSmall:before, .serviceLayersContainer .openCloseTitle.iconSmall:before {
+    margin-right: 10px; }
+.serviceServiceContainer .closed .openCloseTitle, .serviceLayersContainer .closed .openCloseTitle {
+  background-color: #f9f9f9; }
+.serviceServiceContainer .metaText, .serviceLayersContainer .metaText {
+  display: block;
+  margin-left: 95px;
+  word-wrap: break-word; }
+
+.instanceContainer .linkButton {
+  display: inline-block; }
+.instanceContainer .leftContainer .inputWrapper, .instanceContainer .leftContainer .dropdown {
+  margin-bottom: 10px; }
+.instanceContainer .leftContainer .inputWrapper input {
+  width: 100%; }
+.instanceContainer .extendedGroup .on-off {
+  border: solid 1px #6d6d6d;
+  background-color: #b9b9b9; }
+  .instanceContainer .extendedGroup .on-off.active {
+    background-color: #a0a0a0; }
+  .instanceContainer .extendedGroup .on-off:hover {
+    background-color: #c6c6c6; }
+    .instanceContainer .extendedGroup .on-off:hover.active {
+      background-color: #acacac; }
+.instanceContainer .extendedGroup .blockgroup .labelInput {
+  width: 80px; }
+.instanceContainer .extendedGroup .blockgroup .inputWrapper, .instanceContainer .extendedGroup .blockgroup div.dropdown {
+  width: 200px;
+  margin: 0.25em 0;
+  display: inline-block; }
+.instanceContainer .extendedGroup .on-off-content {
+  background-color: #e2e2e2; }
+.instanceContainer .extendedGroup .vendorspecific-content, .instanceContainer .extendedGroup .on-off-content .on-off-content {
+  padding: 10px 10px 10px 10px; }
+.instanceContainer .extendedGroup .labelCheck {
+  margin: 0 0 0 0.25em;
+  height: auto; }
+.instanceContainer .extendedGroup .on-off-title {
+  padding: 0 10px 0 10px; }
+.instanceContainer .extendedGroup .blockgroup {
+  margin-bottom: 1em; }
+.instanceContainer .extendedGroup .vendorspecific-content input {
+  width: 100%; }
+.instanceContainer .extendedGroup .vendorspecific-content a.collectionRemove {
+  float: right; }
+.instanceContainer .extendedGroup .mb-slider {
+  margin-top: 10px; }
+
+.instanceTable {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .instanceTable .checkboxColumn {
+    text-align: center; }
+  .instanceTable .odd {
+    background-color: #eaeaea; }
+  .instanceTable.table {
+    background-color: #fefefe; }
+    .instanceTable.table > thead > tr > .checkboxColumn {
+      padding-left: 2px;
+      padding-right: 2px; }
+    .instanceTable.table > tbody > tr > td.titleColumn {
+      width: 260px; }
+    .instanceTable.table > tbody > tr > td.itemType {
+      padding-right: 0;
+      padding-left: 0; }
+    .instanceTable.table > tbody > tr > td.minScaleColumn, .instanceTable.table > tbody > tr > td.maxScaleColumn {
+      padding-left: 4px; }
+  .instanceTable tbody .dropdown {
+    min-width: 100%; }
+  .instanceTable tbody .minScaleColumn, .instanceTable tbody .maxScaleColumn, .instanceTable tbody .styleColumn {
+    width: 80px; }
+  .instanceTable tbody .checkboxColumn {
+    padding: 5px 3px 5px 3px; }
+  .instanceTable tbody .checkWrapper {
+    margin-top: 5px;
+    width: 100%; }
+  .instanceTable .level0 {
+    margin-left: 4px; }
+  .instanceTable .level1 {
+    margin-left: 10px; }
+  .instanceTable .level2 {
+    margin-left: 16px; }
+  .instanceTable .level3 {
+    margin-left: 22px; }
+  .instanceTable .level4 {
+    margin-left: 28px; }
+  .instanceTable .dummy {
+    display: none; }
+  .instanceTable .itemType {
+    line-height: 38px;
+    padding: 0px;
+    cursor: ns-resize; }
+  .instanceTable .moreColumn {
+    padding-left: 0px; }
+  .instanceTable .iconMore {
+    position: relative;
+    line-height: 28px; }
+  .instanceTable .input {
+    width: 80px; }
+  .instanceTable .titleColumn .input {
+    width: 200px; }
+
+.infoMsgBox {
+  z-index: 10;
+  min-width: 260px;
+  padding: 3px 10px 3px 10px;
+  background-color: white;
+  border: solid 1px #a2a2a2;
+  position: absolute;
+  top: -8px;
+  right: 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .infoMsgBox.hide {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    position: absolute;
+    right: 1000px; }
+  .infoMsgBox:after, .infoMsgBox:before {
+    position: absolute;
+    left: 100%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0; }
+  .infoMsgBox:after {
+    border-left-color: #404040;
+    border-width: 4px;
+    top: 13px;
+    margin-top: -4px; }
+  .infoMsgBox:before {
+    border-left-color: #404040;
+    border-width: 6px;
+    top: 13px;
+    margin-top: -5px; }
+  .infoMsgBox .labelText {
+    width: 100px;
+    display: inline-block; }
+  .infoMsgBox .dropdown {
+    min-width: 130px !important; }
+
+.tableUserGroups .description {
+  text-align: right; }
+.tableUserGroups .checkWrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+.tableUserGroups .iconCheckboxActive:before, .tableUserGroups .iconCheckbox:before, .tableUserGroups .regionProperties .iconRadio:before, .regionProperties .tableUserGroups .iconRadio:before, .tableUserGroups .regionProperties .iconRadioActive:before, .regionProperties .tableUserGroups .iconRadioActive:before {
+  display: inline-block;
+  font-size: 153%;
+  margin-top: 4px; }
+.tableUserGroups .iconCheckbox:before, .tableUserGroups .regionProperties .iconRadio:before, .regionProperties .tableUserGroups .iconRadio:before, .tableUserGroups .regionProperties .iconRadioActive:before, .regionProperties .tableUserGroups .iconRadioActive:before {
+  opacity: 0.4; }
+.tableUserGroups .iconCheckbox:hover:before, .tableUserGroups .regionProperties .iconRadio:hover:before, .regionProperties .tableUserGroups .iconRadio:hover:before, .tableUserGroups .regionProperties .iconRadioActive:hover:before, .regionProperties .tableUserGroups .iconRadioActive:hover:before {
+  opacity: 0.6; }
+.tableUserGroups .iconCheckboxActive:before {
+  opacity: 0.8; }
+.tableUserGroups .iconCheckboxActive:hover:before {
+  opacity: 1.0; }
+.tableUserGroups .tdContentWrapper {
+  position: relative;
+  padding-left: 25px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  display: block; }
+
+.userGroupTabContainer .containerBaseData textarea, .userGroupTabContainer .containerProfile textarea {
+  height: 150px; }
+.userGroupTabContainer .validationInput[disabled] {
+  background: #eeeeee; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+  color: #3f3f3f;
+  background-image: url("../../../../bundles/mapbendercore/image/body.png");
+  background: -owg-linear-gradient(rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0)) fixed, url("../../../../bundles/mapbendercore/image/body.png");
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0)) fixed, url("../../../../bundles/mapbendercore/image/body.png");
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0)) fixed, url("../../../../bundles/mapbendercore/image/body.png");
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0)) fixed, url("../../../../bundles/mapbendercore/image/body.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.3) 100px, rgba(255, 255, 255, 0)) fixed, url("../../../../bundles/mapbendercore/image/body.png"); }
+
+ul, ol {
+  list-style: none; }
+
+hr, h1, h2, h3, ul, ol, li {
+  margin: 0;
+  padding: 0px; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0px; }
+
+.italic {
+  font-style: italic; }
+
+.smallerText {
+  font-size: 9px; }
+
+.smallText, .serviceContainer .metaText, .labelInput, .labelText, .labelCheck, .description, .popupSubTitle, .input, .buttonCore, .button, .tabContainerAlt .tab, .accordionContainer .accordion > div, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .button.critical, .linkButton, .tabContainer .tab, .dropdown {
+  font-size: 11px; }
+
+.bigText, .title, .popupHead .popupTitle {
+  font-size: 15px; }
+
+.biggerText, .contentTitle {
+  font-size: 21px; }
+
+.contentTitle {
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: dashed 1px #b3b3b3; }
+
+.title, .popupHead .popupTitle {
+  font-weight: normal;
+  color: #3f3f3f; }
+
+.subTitle, fieldset legend {
+  font-size: 13px;
+  color: #5b932a; }
+
+.labelInput, .labelText, .labelCheck {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.labelInput {
+  display: inline-block;
+  color: #707070;
+  margin-right: 10px;
+  line-height: 29px; }
+  .labelInput .required {
+    color: #aa2323; }
+
+.labelCheck {
+  color: #707070;
+  margin-left: 5px; }
+
+.labelText {
+  color: #5b932a; }
+
+.description {
+  color: #707070;
+  font-style: italic; }
+
+.hidden {
+  display: none; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.clear, .clearContainer {
+  clear: both; }
+
+.clearContainer {
+  height: 0; }
+
+.overlay {
+  background: url("../../../../bundles/mapbendercore/image/overlay.png");
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; }
+
+.popupHead {
+  border-bottom: dashed 1px #b3b3b3;
+  margin: 0 20px 20px 20px;
+  padding: 20px 0 10px 0; }
+  .popupHead.draggable {
+    cursor: move; }
+
+.popup .popupButtons .button, .popup .popupButtons .tabContainerAlt .tab, .tabContainerAlt .popup .popupButtons .tab, .popup .popupButtons .accordionContainer .accordion > div, .accordionContainer .popup .popupButtons .accordion > div, .popup .popupButtons .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .popup .popupButtons a {
+  margin-left: 3px; }
+
+.fom-popup .popupButtons {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 0; }
+
+.mapbender-popup .popupButtons {
+  text-align: right; }
+
+.mapbender-popup {
+  display: flex;
+  flex-direction: column; }
+  .mapbender-popup .popupHead, .mapbender-popup .footer {
+    flex: 0 0 auto; }
+  .mapbender-popup .popup-body {
+    flex: 1 1 auto;
+    padding: 0 20px; }
+    .mapbender-popup .popup-body.popupScroll .popupContent, .mapbender-popup .popup-body.popupScroll .popupSubContent {
+      max-width: calc(100% - 20px); }
+    .mapbender-popup .popup-body .popupContent, .mapbender-popup .popup-body .popupSubContent {
+      padding: 0;
+      margin-bottom: 20px; }
+  .mapbender-popup .footer {
+    padding: 20px; }
+
+.fom-popup .popupContent, .fom-popup .popupSubContent {
+  padding: 0 20px; }
+
+.fom-popup .popupContent + .popupContent, .fom-popup .popupContent + .popupSubcontent, .fom-popup .popupSubContent + .popupContent, .fom-popup .popupSubContent + .popupSubcontent {
+  margin-top: 20px; }
+.fom-popup .popupSubContent {
+  width: 100%;
+  height: 100%; }
+
+.popup {
+  position: relative;
+  z-index: 9999;
+  background-color: #f4f4f4;
+  background-image: url("");
+  border-top: solid 1px #858585;
+  border-left: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  border-bottom: solid 5px #a2a2a2; }
+  .popup.ui-resizable {
+    min-width: 300px;
+    min-height: 250px; }
+  .popup.fom-popup {
+    min-height: 250px;
+    width: 500px;
+    padding-bottom: 20px; }
+  .popup.mapbender-popup {
+    left: 80px;
+    top: 100px; }
+  .popup.popupOverflow .popupContent, .popup.popupOverflow .popupSubContent {
+    overflow: visible; }
+
+.popupContainer.ui-draggable .popupHead, .popup.ui-draggable .popupHead {
+  cursor: move; }
+.popupContainer.ui-draggable.ui-draggable-dragging, .popup.ui-draggable.ui-draggable-dragging {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6; }
+
+.popupContainer {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0; }
+  .popupContainer.ui-draggable {
+    position: absolute !important; }
+  .popupContainer .popup {
+    margin-left: 80px;
+    margin-top: 100px; }
+  .popupContainer.modal {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    display: block; }
+    .popupContainer.modal .popup {
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+      max-height: 100%; }
+      .popupContainer.modal .popup.fom-popup {
+        height: 100%; }
+    .popupContainer.modal .overlay {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+      opacity: 0.9;
+      position: fixed !important;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+
+.ui-resizable-se {
+  font-size: 16px;
+  position: absolute;
+  right: 3px;
+  bottom: -3px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: default; }
+  .ui-resizable-se:before {
+    font-family: FontAwesome;
+    content: "\f054";
+    display: block; }
+
+.popupScroll {
+  overflow: auto; }
+
+.fom-popup .popupScroll {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  bottom: 60px;
+  left: 0; }
+
+/*
+   This is the original Bootstrap 4 declaration for a gutter-less grid.
+   See https://getbootstrap.com/docs/4.0/layout/grid/#no-gutters
+   We haven't universally adopted Bootstrap 4 yet, but this should remain compatible
+   if / when we do.
+ */
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  .no-gutters > .col, .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+
+.input {
+  color: #858585;
+  border: solid 1px #c8c8c8;
+  line-height: 21px;
+  height: 28px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9; }
+  .input:focus {
+    outline: none;
+    border: 1px solid #8dce55; }
+  .input::placeholder {
+    color: #b8b8b8; }
+
+.inputWrapper {
+  position: relative;
+  display: inline-block; }
+  .inputWrapper .validationMsgBox {
+    position: absolute;
+    z-index: 9999;
+    min-width: 260px;
+    margin-left: -10px;
+    color: #aa2323;
+    padding: 3px 10px 2px 10px;
+    background-color: #f6d6d6;
+    border: solid 1px #eeabab;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+    .inputWrapper .validationMsgBox.hide {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      margin-left: 0px; }
+    .inputWrapper .validationMsgBox:after, .inputWrapper .validationMsgBox:before {
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      right: 100%; }
+    .inputWrapper .validationMsgBox:after {
+      border-right-color: #f6d6d6;
+      border-width: 3px;
+      top: 14px;
+      margin-top: -3px; }
+    .inputWrapper .validationMsgBox:before {
+      border-right-color: #eeabab;
+      border-width: 5px;
+      top: 14px;
+      margin-top: -5px; }
+
+.buttonCore, .button, .tabContainerAlt .tab, .accordionContainer .accordion > div, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .button.critical, .linkButton {
+  font-family: "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  cursor: pointer; }
+@-moz-document url-prefix() {
+  .buttonCore .buttonCore, .button .buttonCore, .tabContainerAlt .tab .buttonCore, .accordionContainer .accordion > div .buttonCore, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .buttonCore, .linkButton .buttonCore, .buttonCore .button, .button .button, .tabContainerAlt .tab .button, .accordionContainer .accordion > div .button, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .button, .linkButton .button, .buttonCore .tabContainerAlt .tab, .tabContainerAlt .buttonCore .tab, .button .tabContainerAlt .tab, .tabContainerAlt .button .tab, .tabContainerAlt .tab .tab, .accordionContainer .accordion > div .tabContainerAlt .tab, .tabContainerAlt .accordionContainer .accordion > div .tab, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .tabContainerAlt .tab, .tabContainerAlt .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .tab, .linkButton .tabContainerAlt .tab, .tabContainerAlt .linkButton .tab, .buttonCore .accordionContainer .accordion > div, .accordionContainer .buttonCore .accordion > div, .button .accordionContainer .accordion > div, .accordionContainer .button .accordion > div, .tabContainerAlt .tab .accordionContainer .accordion > div, .accordionContainer .tabContainerAlt .tab .accordion > div, .accordionContainer .accordion > div .accordion > div, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .accordionContainer .accordion > div, .accordionContainer .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .accordion > div, .linkButton .accordionContainer .accordion > div, .accordionContainer .linkButton .accordion > div, .buttonCore .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .buttonCore a, .button .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .button a, .tabContainerAlt .tab .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .tabContainerAlt .tab a, .accordionContainer .accordion > div .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .accordionContainer .accordion > div a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a a, .linkButton .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane .linkButton a, .buttonCore .linkButton, .button .linkButton, .tabContainerAlt .tab .linkButton, .accordionContainer .accordion > div .linkButton, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a .linkButton, .linkButton .linkButton {
+    font: 11px sans-serif; } }
+
+.button, .tabContainerAlt .tab, .accordionContainer .accordion > div, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a {
+  padding: 5px 10px;
+  height: 24px;
+  line-height: 11px;
+  display: inline-block;
+  margin: 0px;
+  text-decoration: none;
+  border: 1px solid #538e24;
+  color: #fff;
+  background-color: #6fb536;
+  -webkit-transition: all, 0.3s, ease-in-out;
+  -moz-transition: all, 0.3s, ease-in-out;
+  -o-transition: all, 0.3s, ease-in-out;
+  transition: all, 0.3s, ease-in-out;
+  outline: none; }
+  .button:hover, .tabContainerAlt .tab:hover, .accordionContainer .accordion > div:hover, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a:hover {
+    background-color: #63a130; }
+  .button:focus, .tabContainerAlt .tab:focus, .accordionContainer .accordion > div:focus, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a:focus {
+    box-shadow: 0 0 5px #47791f; }
+  .button.critical, .tabContainerAlt .critical.tab, .accordionContainer .accordion > div.critical, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a.critical {
+    border: 1px solid #9f3434;
+    color: #fff;
+    background-color: #d36565; }
+    .button.critical:hover, .tabContainerAlt .critical.tab:hover, .accordionContainer .accordion > div.critical:hover, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a.critical:hover {
+      background-color: #cd5151; }
+
+.linkButton {
+  color: #707070; }
+  .linkButton:before {
+    margin-right: 5px; }
+  .linkButton:hover, .linkButton.activeLink, .linkButton:active {
+    color: #5b932a; }
+
+.seperator {
+  border: none;
+  border-bottom: dashed 1px #b3b3b3; }
+
+.dekoSeperator {
+  height: 6px;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #404040;
+  background: url("../../../../bundles/mapbendercore/image/line.png"); }
+
+.box {
+  border: solid 1px #a2a2a2;
+  background-color: #f9f9f9; }
+
+.listFilterBoxes .filterItem {
+  position: relative;
+  background-color: #f9f9f9;
+  margin-bottom: 20px; }
+.listFilterBoxes .col1 {
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  line-height: 15px;
+  background-color: #404040;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+  .listFilterBoxes .col1 .iconBig, .listFilterBoxes .col1 .icon {
+    color: #fff;
+    cursor: default; }
+.listFilterBoxes .col2 {
+  padding: 10px; }
+.listFilterBoxes .buttonGroup {
+  float: right;
+  font-size: 20px;
+  line-height: 20px; }
+  .listFilterBoxes .buttonGroup :last-child:before {
+    margin: 0; }
+.listFilterBoxes .description {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: dashed 1px #b3b3b3; }
+
+.messageBox {
+  padding: 10px;
+  margin-bottom: 20px; }
+  .messageBox.error {
+    color: #aa2323;
+    background-color: #f6d6d6;
+    border: solid 1px #eeabab; }
+  .messageBox.hint {
+    color: #2375a8;
+    background-color: #d4e9f6;
+    border: solid 1px #aad3ed; }
+
+.flashBox {
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+  width: 280px;
+  margin-left: -140px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+  .flashBox.success {
+    color: #197b19;
+    background-color: #d1f5d1; }
+  .flashBox.error {
+    color: #801a1a;
+    background-color: #f6d6d6; }
+  .flashBox.warning {
+    color: #a4a421;
+    background-color: #fefef9; }
+  .flashBox.kill {
+    top: -100px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+fieldset {
+  padding: 20px; }
+  fieldset legend {
+    margin: 0;
+    padding: 0 5px 0 5px; }
+
+.tabContainer .tab {
+  margin-right: 3px;
+  color: #707070;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  height: 34px;
+  z-index: 10;
+  border-left: solid 1px #a2a2a2;
+  border-top: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  float: left;
+  padding: 3px 10px 3px 10px;
+  position: relative;
+  bottom: '-$tabPopHeight*2';
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .tabContainer .tab:hover {
+    bottom: -3px; }
+  .tabContainer .tab.active {
+    cursor: default;
+    color: #3f3f3f;
+    bottom: -3px;
+    height: 34px;
+    z-index: 30;
+    background-color: #f9f9f9; }
+.tabContainer .container {
+  clear: left;
+  display: none;
+  padding: 20px;
+  z-index: 20;
+  position: relative;
+  background-color: #f9f9f9;
+  border-top: solid 3px #a2a2a2;
+  border-left: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  border-bottom: solid 1px #a2a2a2; }
+  .tabContainer .container.active {
+    display: block; }
+
+.tabContainerAlt .tab {
+  display: inline-block; }
+  .tabContainerAlt .tab.active {
+    cursor: default;
+    background-color: #578e2a;
+    color: #fff; }
+  .tabContainerAlt .tab a {
+    color: inherit; }
+.tabContainerAlt .container {
+  border-top: dashed 1px #a2a2a2;
+  margin-top: 20px;
+  clear: left;
+  display: none;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 20;
+  position: relative;
+  width: 100%; }
+  .tabContainerAlt .container.active {
+    display: block; }
+
+.accordionContainer {
+  display: table;
+  height: 100%;
+  width: 100%; }
+  .accordionContainer .accordion {
+    display: table-row; }
+    .accordionContainer .accordion > div {
+      display: table-cell; }
+    .accordionContainer .accordion.active {
+      cursor: default;
+      background-color: #578e2a;
+      color: #fff; }
+      .accordionContainer .accordion.active > div {
+        background-color: #578e2a; }
+  .accordionContainer .container-accordion {
+    display: none; }
+    .accordionContainer .container-accordion.active {
+      display: table-row; }
+      .accordionContainer .container-accordion.active .accordion-cell {
+        display: table-cell;
+        height: 100%; }
+        .accordionContainer .container-accordion.active .accordion-cell .accordion-wrapper {
+          height: 100%;
+          display: block;
+          position: relative; }
+          .accordionContainer .container-accordion.active .accordion-cell .accordion-wrapper > .mb-element, .accordionContainer .container-accordion.active .accordion-cell .accordion-wrapper > div {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%; }
+          .accordionContainer .container-accordion.active .accordion-cell .accordion-wrapper > .mb-element {
+            padding-top: 10px; }
+
+.checkWrapper {
+  cursor: pointer;
+  width: 13px; }
+  .checkWrapper.checkboxDisabled {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4; }
+
+.checkbox {
+  position: absolute;
+  top: -999999px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; }
+
+.radioWrapper {
+  cursor: pointer;
+  width: 13px; }
+  .radioWrapper.radioDisabled {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4; }
+
+.radiobox {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; }
+
+.dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: #5b932a;
+  border: solid 1px #c8c8c8;
+  line-height: 29px;
+  height: 28px;
+  text-align: left;
+  padding-right: 30px;
+  background-color: #FFF;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .dropdown .dropdownValue {
+    padding-left: 5px;
+    color: #858585;
+    border: none;
+    line-height: 29px;
+    cursor: pointer;
+    font-family: "Open Sans","Calluna Sans","Gill Sans MT",Calibri,"Trebuchet MS",sans-serif; }
+    .dropdown .dropdownValue.iconDown:before {
+      position: absolute;
+      top: 0;
+      right: 5px; }
+  .dropdown .dropdownList {
+    background-color: #FFF;
+    color: #858585;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    overflow: auto;
+    max-height: 200px;
+    border: solid 1px #c8c8c8;
+    width: 100%; }
+    .dropdown .dropdownList li {
+      line-height: 29px;
+      padding-left: 5px; }
+      .dropdown .dropdownList li:hover {
+        color: #5b932a;
+        background-color: #f9f9f9; }
+  .dropdown .hiddenDropdown {
+    display: none;
+    position: absolute;
+    top: -9999px; }
+
+.tableCore, .table {
+  width: 100%;
+  background-color: #f9f9f9; }
+  .tableCore td, .table td {
+    padding: 0px 10px; }
+  .tableCore thead, .table thead {
+    border-bottom: solid 5px lightgray; }
+  .tableCore th, .table th {
+    padding: 5px;
+    padding-left: 10px;
+    font-weight: normal;
+    text-align: left; }
+  .tableCore tbody tr, .table tbody tr {
+    border-top: solid 1px #e0e0e0;
+    vertical-align: top; }
+    .tableCore tbody tr:hover, .table tbody tr:hover {
+      background-color: #f1f1f1; }
+  .tableCore tr, .table tr {
+    height: 30px; }
+  .tableCore .iconColumn, .table .iconColumn {
+    float: right;
+    display: table-cell !important;
+    padding-top: 5px;
+    padding-right: 10px;
+    vertical-align: top; }
+
+.table {
+  border-top: solid 3px #404040;
+  border-left: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  border-bottom: solid 1px #a2a2a2; }
+  .table > thead > tr > th {
+    border-bottom: none; }
+
+table td.iconColumn, table th.iconColumn {
+  display: table-cell !important;
+  vertical-align: inherit; }
+
+.permissionsTable.hidePermissions {
+  display: none; }
+.permissionsTable tr {
+  border-bottom: solid 1px #e0e0e0; }
+  .permissionsTable tr.new {
+    background-color: #f0ffed; }
+    .permissionsTable tr.new .labelInput, .permissionsTable tr.new .iconGroup, .permissionsTable tr.new .iconUser {
+      color: green; }
+.permissionsTable th {
+  cursor: pointer;
+  padding: 5px 0px; }
+.permissionsTable td {
+  padding: 5px 0px; }
+  .permissionsTable td .labelInput {
+    width: 150px; }
+  .permissionsTable td .input {
+    display: none; }
+  .permissionsTable td .iconGroup:before, .permissionsTable td .iconUser:before {
+    text-align: center;
+    width: 20px;
+    margin-right: 5px;
+    display: inline-block; }
+.permissionsTable .listFilterInput {
+  margin-bottom: 0; }
+.permissionsTable .checkWrapper, .permissionsTable .headTagWrapper {
+  width: 56px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+  .permissionsTable .checkWrapper.active, .permissionsTable .headTagWrapper.active {
+    color: white; }
+    .permissionsTable .checkWrapper.active.view, .permissionsTable .headTagWrapper.active.view {
+      background-color: #8DCA35; }
+    .permissionsTable .checkWrapper.active.edit, .permissionsTable .checkWrapper.active.delete, .permissionsTable .checkWrapper.active.create, .permissionsTable .headTagWrapper.active.edit, .permissionsTable .headTagWrapper.active.delete, .permissionsTable .headTagWrapper.active.create {
+      background-color: #FFAB00; }
+    .permissionsTable .checkWrapper.active.operator, .permissionsTable .checkWrapper.active.master, .permissionsTable .checkWrapper.active.owner, .permissionsTable .headTagWrapper.active.operator, .permissionsTable .headTagWrapper.active.master, .permissionsTable .headTagWrapper.active.owner {
+      background-color: #FF702A; }
+.permissionsTable .headTagWrapper.multi {
+  background-color: #c1c1c1; }
+
+.tableGroupsAndUsers {
+  border-top: solid 3px #404040;
+  border-left: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  border-bottom: solid 1px #a2a2a2;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.mb-element-modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1000; }
+  .mb-element-modal-dialog > .background {
+    background-color: #c0c0c0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50); }
+
+/* jQuery UI Dialog with Bootstrap classes */
+.mb-element-popup-dialog {
+  z-index: 22;
+  position: absolute !important;
+  border-radius: 0px;
+  border: 1px solid #b3b3b3;
+  box-shadow: none;
+  background: #E4E4E4 url("");
+  border-bottom-width: 5px; }
+  .mb-element-popup-dialog > * {
+    box-sizing: content-box !important; }
+  .mb-element-popup-dialog .ui-dialog-titlebar-close {
+    display: inline-block;
+    font-size: 0;
+    text-rendering: auto; }
+  .mb-element-popup-dialog > .modal-header {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #47791f;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    user-select: none;
+    position: relative;
+    border-bottom: none; }
+    .mb-element-popup-dialog > .modal-header .ui-dialog-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      user-select: none;
+      cursor: default; }
+    .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane button.close {
+      margin: 1px; }
+      .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane button.close .ui-icon-closethick:before {
+        font-family: FontAwesome;
+        font-size: 23px;
+        display: inline-block;
+        content: "\f00d";
+        font-weight: bold;
+        margin-top: -2px;
+        margin-bottom: 2px; }
+      .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane button.close .ui-button-icon-space {
+        display: none; }
+    .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a {
+      display: block;
+      float: right;
+      width: auto;
+      white-space: normal;
+      color: #000000 !important;
+      height: 20px;
+      overflow: hidden;
+      background-color: transparent !important;
+      border-radius: 0;
+      opacity: .2;
+      text-shadow: white 0px 1px 0px;
+      padding-left: 4px !important;
+      padding-right: 0 !important; }
+      .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a:hover, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a:focus {
+        background-color: transparent;
+        opacity: .5; }
+      .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a span {
+        font-size: 0;
+        /** maximize */
+        /** collapse **/
+        /** restore to normal **/ }
+        .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a span:after {
+          font-family: FontAwesome;
+          font-size: 23px;
+          display: inline-block;
+          content: "\f00d";
+          font-weight: bold; }
+        .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a span.ui-icon-extlink:after {
+          content: "\f0b2";
+          font-size: 18px;
+          margin-top: -2px; }
+        .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a span.ui-icon-triangle-1-s:after {
+          content: "\f062";
+          font-size: 18px;
+          margin-top: -3px; }
+        .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a span.ui-icon-newwin:after {
+          content: "\f063";
+          font-size: 18px;
+          margin-top: -3px; }
+    .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane > .close > span.ui-button-text {
+      font-size: 0;
+      margin-left: 4px;
+      margin-top: -1px;
+      margin-right: 5px;
+      display: block; }
+      .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane > .close > span.ui-button-text:after {
+        font-family: FontAwesome;
+        font-size: 23px;
+        display: inline-block;
+        content: "\f00d"; }
+  .mb-element-popup-dialog > .modal-body {
+    /** Dialog resizing fix */
+    width: auto !important;
+    overflow: auto; }
+    .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > ul.modal-header {
+      background-color: #B6D39E; }
+      .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > ul.modal-header > li {
+        margin-bottom: 0px;
+        border: none;
+        margin-right: -1px; }
+        .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > ul.modal-header > li:first-child > a {
+          border-left: 0 !important; }
+        .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > ul.modal-header > li:last-child > a {
+          border-right: 0 !important; }
+        .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > ul.modal-header > li > a {
+          border-top: none; }
+    .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > .tab-content {
+      padding: 0px;
+      position: relative; }
+      .mb-element-popup-dialog > .modal-body > .mapbender-element-tab-navigator > .tab-content > form {
+        padding: 10px; }
+  .mb-element-popup-dialog > .modal-footer {
+    border-top: 1px solid #c0c0c0;
+    background-color: transparent;
+    padding: 10px; }
+    .mb-element-popup-dialog > .modal-footer button {
+      border-radius: 0; }
+  .mb-element-popup-dialog .ui-resizable {
+    position: relative; }
+  .mb-element-popup-dialog .ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block; }
+  .mb-element-popup-dialog .ui-resizable-disabled .ui-resizable-handle, .mb-element-popup-dialog .ui-resizable-autohide .ui-resizable-handle {
+    display: none; }
+  .mb-element-popup-dialog .ui-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    width: 100%;
+    top: -5px;
+    left: 0; }
+  .mb-element-popup-dialog .ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0; }
+  .mb-element-popup-dialog .ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%; }
+  .mb-element-popup-dialog .ui-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    top: 0;
+    height: 100%; }
+  .mb-element-popup-dialog .ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px; }
+  .mb-element-popup-dialog .ui-resizable-sw {
+    cursor: sw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    bottom: -5px; }
+  .mb-element-popup-dialog .ui-resizable-nw {
+    cursor: nw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    top: -5px; }
+  .mb-element-popup-dialog .ui-resizable-ne {
+    cursor: ne-resize;
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -5px; }
+
+/* UI Mapbender slider */
+.mb-slider.ui-slider {
+  font-family: "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  position: relative;
+  border: 1px solid #5b932a;
+  height: 12px;
+  border-radius: 0px !important;
+  /*    > .ui-slider-handle.ui-state-focus{
+      border-color: $ciColor;
+      background-color: lighten($ciColor, 40%);
+    }*/ }
+  .mb-slider.ui-slider > .ui-slider-range {
+    position: absolute;
+    display: block;
+    height: 100%;
+    background-color: #c2e5a4;
+    top: 0; }
+  .mb-slider.ui-slider > .ui-slider-handle {
+    position: absolute;
+    display: block;
+    height: 200%;
+    width: 12px;
+    border: 1px solid #5b932a;
+    background-color: #c2e5a4;
+    top: -5px;
+    margin-left: -6px;
+    border-radius: 0px !important; }
+  .mb-slider.ui-slider > .ui-slider-handle.ui-state-hover, .mb-slider.ui-slider .ui-slider-handle.ui-state-activ, .mb-slider.ui-slider .ui-slider-handle.ui-state-focus {
+    border-color: #5b932a;
+    background-color: #5b932a; }
+
+.page {
+  top: -170px;
+  margin: 0 auto;
+  width: 1000px; }
+
+.popupContainer, .page {
+  position: relative; }
+  .popupContainer input.input, .page input.input {
+    background: #fff; }
+  .popupContainer a, .page a {
+    text-decoration: none; }
+    .popupContainer a:hover, .page a:hover {
+      color: #3f3f3f; }
+  @media (min-width: 992px) {
+    .popupContainer .container, .page .container {
+      width: auto; } }
+  @media (min-width: 768px) {
+    .popupContainer .container, .page .container {
+      width: auto; } }
+  .popupContainer .table > tbody > tr > td, .popupContainer .table > tbody > tr > th, .popupContainer .table > tfoot > tr > td, .popupContainer .table > tfoot > tr > th, .popupContainer .table > thead > tr > td, .popupContainer .table > thead > tr > th, .page .table > tbody > tr > td, .page .table > tbody > tr > th, .page .table > tfoot > tr > td, .page .table > tfoot > tr > th, .page .table > thead > tr > td, .page .table > thead > tr > th {
+    border-top: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+.notifyjs-corner {
+  z-index: 100000 !important; }
+
+.head {
+  position: relative;
+  height: 170px;
+  min-width: 1000px;
+  border-top: solid 5px #272727;
+  background-image: url("../../../../bundles/mapbendercore/image/head.png");
+  background: -owg-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url("../../../../bundles/mapbendercore/image/head.png");
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url("../../../../bundles/mapbendercore/image/head.png");
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url("../../../../bundles/mapbendercore/image/head.png");
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url("../../../../bundles/mapbendercore/image/head.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)), url("../../../../bundles/mapbendercore/image/head.png"); }
+  .head hr {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+.account-bar-wrap {
+  float: right; }
+
+.sitelinks {
+  margin-top: 0.5em; }
+  .sitelinks li {
+    display: inline-block; }
+    .sitelinks li a, .sitelinks li a:visited {
+      color: inherit; }
+    .sitelinks li a:hover, .sitelinks li a:focus {
+      color: #fff; }
+
+.accountBar {
+  display: inline-block;
+  color: #707070;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  .accountBar > .accountMenu {
+    height: 20px;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .accountBar > .accountMenu.opened {
+      height: 65px; }
+    .accountBar > .accountMenu .iconDown {
+      padding-right: 20px;
+      font-family: "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+      .accountBar > .accountMenu .iconDown:before {
+        position: absolute;
+        right: 0; }
+
+.leftPane {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .leftPane > .navigation {
+    background-color: #f6f6f6;
+    box-shadow: -1em 0 2em inset #e0e0e0;
+    border-bottom-left-radius: 5px;
+    padding: 10px; }
+    .leftPane > .navigation .navItem {
+      display: block; }
+      .leftPane > .navigation .navItem > a {
+        display: block;
+        padding: 2px 10px; }
+        .leftPane > .navigation .navItem > a:hover, .leftPane > .navigation .navItem > a:focus {
+          background-color: #E0DDDD;
+          color: #000;
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -o-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+  .leftPane .logo {
+    max-height: 120px;
+    position: absolute;
+    top: 20px;
+    left: 30px; }
+
+.logoContainer {
+  position: relative;
+  height: 170px; }
+
+.navLevel1 {
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-left: solid 1px #a2a2a2;
+  border-bottom: solid 1px #a2a2a2; }
+
+.navLevel2, .navLevel3 {
+  margin-left: 10px; }
+
+.navItem a {
+  font-family: "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  color: #707070;
+  padding: 5px 10px; }
+  .navItem a:before {
+    margin-right: 5px; }
+  .navItem a:hover {
+    color: #3f3f3f; }
+.navItem.activeItem {
+  display: block; }
+  .navItem.activeItem > a {
+    color: #5b932a; }
+
+.rightPane {
+  width: 800px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 200px; }
+  .rightPane .top {
+    height: 120px; }
+
+textarea, input[type=text], input[type=submit], input[type=password], a.button, .tabContainerAlt a.tab, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a, button, div.dropdown {
+  border-radius: 3px; }
+
+a.button, .tabContainerAlt a.tab, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a {
+  color: #404040; }
+  a.button:hover, .tabContainerAlt a.tab:hover, .mb-element-popup-dialog > .modal-header .ui-dialog-titlebar-buttonpane a:hover {
+    color: #fff; }
+
+ul.dropdownList {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-top: -3px; }
+
+.tabContainer .tabs > .tab {
+  height: 32px;
+  background-color: #ECECEC;
+  padding-top: 5px;
+  bottom: -1px;
+  margin-right: -1px; }
+  .tabContainer .tabs > .tab:first-child {
+    border-top-left-radius: 5px; }
+  .tabContainer .tabs > .tab:last-child {
+    border-top-right-radius: 5px; }
+  .tabContainer .tabs > .tab:hover, .tabContainer .tabs > .tab:focus {
+    padding-top: 5px;
+    bottom: 0;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: 0px -1px 1px #000; }
+  .tabContainer .tabs > .tab.active {
+    bottom: 0px;
+    height: 35px;
+    margin-bottom: -3px;
+    background-color: #f9f9f9; }
+.tabContainer > .container {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px; }
+
+.contentPane > .content {
+  min-height: 600px;
+  position: relative;
+  padding: 20px;
+  background: #fefefe url("");
+  border-radius: 5px;
+  border-top: solid 1px #858585;
+  border-left: solid 1px #a2a2a2;
+  border-right: solid 1px #a2a2a2;
+  border-bottom: solid 5px #a2a2a2; }
+  .contentPane > .content .tabContainer, .contentPane > .content .containerExchange {
+    margin-bottom: 20px; }
+  .contentPane > .content form:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both; }
+  .contentPane > .content form label.labelInput {
+    margin: 0; }
+  .contentPane > .content form .dropdown {
+    width: 100%; }
+  .contentPane > .content form .inputWrapper {
+    display: block; }
+    .contentPane > .content form .inputWrapper textarea, .contentPane > .content form .inputWrapper input[type="password"], .contentPane > .content form .inputWrapper input[type="email"], .contentPane > .content form .inputWrapper input[type="text"] {
+      width: 100%;
+      background: #fff; }
+  .contentPane > .content form select[multiple="multiple"] {
+    width: 100%;
+    margin-bottom: 10px; }
+  .contentPane > .content form input[type='submit'] {
+    min-width: 20px; }
+  .contentPane > .content .button-group {
+    text-align: right;
+    margin: 20px 0; }
+.contentPane .mapbenderVersion {
+  color: #fff;
+  text-align: right; }
+
+.icon[data-state] {
+  cursor: default;
+  opacity: 1; }
+
+.icon[data-state="running"]:before {
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite; }
+
+.icon[data-state="error"]:before {
+  color: #aa2323; }
+
+.icon[data-state="aborted"]:before {
+  color: #aa2323; }
+
+div[data-type="datetime"] {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+  margin-bottom: 10px; }
+
+div[data-type="datetime"] div:first-child div.dropdown {
+  min-width: 98px;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 10px; }
+
+div[data-type="datetime"] div:last-child div.dropdown {
+  min-width: 144px;
+  display: inline-block;
+  margin-right: 3px; }
+
+.secureElement.has:before {
+  color: #b23a3a;
+  font-weight: bold; }
+
+label[for^="inputFilter"] {
+  width: auto;
+  min-width: 80px;
+  margin: 0 1em 0 0;
+  /** FOM templates like to add .left for no particular reason, defeat that */
+  float: none; }
+
+.listFilterInput {
+  width: 200px;
+  max-width: calc(100% - 120px);
+  margin-bottom: 30px;
+  /** FOM templates like to add .left for no particular reason, defeat that */
+  float: none; }
+
+#addElmPermission {
+  position: relative;
+  top: 30px; }
+
+.screenshot_upload {
+  min-width: 300px; }
+  .screenshot_upload .upload {
+    position: relative; }
+  .screenshot_upload .inputWrapper {
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .screenshot_upload .inputWrapper input[type=file] {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      -moz-opacity: 0;
+      -khtml-opacity: 0;
+      opacity: 0;
+      cursor: pointer; }
+  .screenshot_upload .upload_label {
+    overflow: hidden; }
+  .screenshot_upload .upload_button {
+    padding: 0 10px;
+    font-weight: normal;
+    cursor: pointer; }
+    .screenshot_upload .upload_button.hover, .screenshot_upload .upload_button:hover {
+      background-color: #63a130; }
+  .screenshot_upload .upload_button, .screenshot_upload .upload_label, .screenshot_upload .inputWrapper input[type=file] {
+    line-height: 24px; }
+
+.listFilterApplicationBoxes .filterItem, .listFilterApplicationBoxes .col2 {
+  min-height: 120px; }
+.listFilterApplicationBoxes .col1 {
+  width: 120px;
+  padding: 0;
+  display: table;
+  text-align: center;
+  font-size: 70px;
+  color: #595959; }
+  .listFilterApplicationBoxes .col1 div.cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 120px;
+    width: 120px; }
+    .listFilterApplicationBoxes .col1 div.cell img {
+      max-height: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto; }
+.listFilterApplicationBoxes .col2 {
+  margin-left: 120px; }
+.listFilterApplicationBoxes .iconAppDefault:before {
+  margin: 0; }
+
+.mapbender-popup {
+  width: 500px; }
+
+.popup.elementPopup {
+  width: 500px;
+  min-width: 500px;
+  /*
+    Temporary hack for FOM's legacy form field theme:
+    Ensure enough vertical space that certain element popups ending with a dropdown
+    (usually 1 or 2 text fields followed by a "target" <select>) size properly, so that the
+    absolute-positioned dropdown overlay does not vanish into the scrollable area below the body
+    of the popup. E.g. scale selector, image export.
+   */
+  min-height: 520px; }
+  .popup.elementPopup .popupContent, .popup.elementPopup .popupSubContent {
+    min-width: 440px; }
+
+.popup.new-instance-select {
+  min-width: 500px;
+  width: 70%; }
+
+.applicationTabContainer {
+  margin-bottom: 20px; }
+
+.containerBaseData .screenshot_img {
+  width: 200px;
+  height: 200px;
+  margin: 29px 29px;
+  position: relative;
+  box-sizing: content-box;
+  border: 1px solid #c0c0c0;
+  background-color: #f9f9f9;
+  display: table;
+  overflow: hidden; }
+  .containerBaseData .screenshot_img img {
+    display: block; }
+  .containerBaseData .screenshot_img .iconAppDefault {
+    display: none; }
+  .containerBaseData .screenshot_img.default img {
+    display: none; }
+  .containerBaseData .screenshot_img.default .iconAppDefault {
+    display: inline-block; }
+  .containerBaseData .screenshot_img.default {
+    border: 1px solid #a2a2a2;
+    background-color: #404040; }
+  .containerBaseData .screenshot_img .iconAppDefault {
+    font-style: normal;
+    font-size: 60px;
+    color: #595959; }
+  .containerBaseData .screenshot_img div.cell_edit {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    width: 200px; }
+    .containerBaseData .screenshot_img div.cell_edit .delete {
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .containerBaseData .screenshot_img div.cell_edit img {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin: 0 auto; }
+.containerBaseData textarea, .containerBaseData input, .containerBaseData .dropdown {
+  min-width: 300px; }
+.containerBaseData textarea {
+  height: 100px; }
+.containerBaseData .messageBox {
+  margin: 23px 0 0 1em; }
+
+.containerExchange {
+  border: 1px solid #c0c0c0;
+  background-color: #f9f9f9;
+  padding: 20px; }
+
+.popup .popupSubContent {
+  overflow: visible; }
+  .popup .popupSubContent .labelInput, .popup .popupSubContent .input {
+    float: left; }
+
+/**
+  Used for both elements and layersets. NOT a .tableCore. .tableCore remains weird and unfixable
+  because some of its weirdness is relied upon in FOM-generated markup for users, groupsetc
+ */
+.application-component-table {
+  width: 100%;
+  margin: 20px 0; }
+  .application-component-table thead {
+    border-bottom: solid 5px lightgray; }
+  .application-component-table th {
+    font-weight: normal; }
+  .application-component-table tr.ui-sortable-handle {
+    cursor: move; }
+    .application-component-table tr.ui-sortable-handle:hover {
+      background-color: #f1f1f1; }
+    .application-component-table tr.ui-sortable-handle.ui-sortable-helper {
+      background-color: #ededed; }
+  .application-component-table tbody tr {
+    border-top: solid 1px #e0e0e0;
+    vertical-align: top; }
+    .application-component-table tbody tr > td:first-child {
+      padding-left: 10px; }
+    .application-component-table tbody tr td {
+      padding-right: 10px; }
+  .application-component-table tr {
+    height: 30px; }
+  .application-component-table .iconColumn {
+    padding-right: 10px;
+    text-align: right; }
+  .application-component-table .iconColumn, .application-component-table .idColumn {
+    white-space: nowrap; }
+
+.elementsTable .typeColumn, .elementsTable .titleColumn {
+  width: 49%; }
+.elementsTable .placeholderRow {
+  height: 20px; }
+
+.layersetTable .titleColumn {
+  width: 99%; }
+
+.checkContainer {
+  color: #707070;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 5px 10px 5px 10px;
+  border: solid 1px white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+  .checkContainer:hover {
+    background-color: white;
+    border: solid 1px #d9d9d9; }
+
+.regionProperties .radioWrapper {
+  margin-left: 10px; }
+.regionProperties label {
+  display: none; }
+.regionProperties .iconRadio {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3; }
+.regionProperties .iconRadioActive {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+.regionProperties .iconRadiotabs {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3; }
+.regionProperties .iconRadiotabsActive {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+.regionProperties .iconRadioaccordion {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3; }
+.regionProperties .iconRadioaccordionActive {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+.regionProperties div {
+  float: none; }
+
+.layersetForm .labelInput {
+  width: 40px;
+  float: left; }
+
+.containerCustomCss .inputWrapper {
+  width: 100%; }

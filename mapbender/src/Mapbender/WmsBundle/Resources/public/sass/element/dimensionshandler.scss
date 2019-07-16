@@ -1,0 +1,56 @@
+.mb-element-dimensionshandler{
+  .dimensionset {
+    line-height: 19px;
+  }
+  .mb-slider {
+    display: inline-block;
+    width: 100%;
+  }
+  /*
+     This is the original Bootstrap 4 declaration for a gutter-less grid.
+     See https://getbootstrap.com/docs/4.0/layout/grid/#no-gutters
+     We haven't universally adopted Bootstrap 4 yet, but this should remain compatible
+     if / when we do.
+   */
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .slider-wrap, .no-gutters .slider-wrap {
+    padding: 0 1em;
+  }
+}
+
+.toolBarItem .mb-element-dimensionshandler{
+  width: 140px;
+  margin-top: -1px; // eat into toolbar item padding to center vertically with other toolbar items
+  display: inline-block;
+  vertical-align: top;
+  .dimensionset {
+    font-size: 11px;
+    line-height: 11px;
+    .mb-slider.ui-slider {
+      border: 2px solid lighten($middleFontColor, 20%) !important;
+      height: 8px;
+      .ui-slider-handle{
+        border: 2px solid $middleFontColor !important;
+        background-color: lighten($middleFontColor, 20%) !important;
+        height:14px;
+        width: 10px;
+        top: -5px;
+      }
+    }
+    .dimensionset-title {
+      text-align: left; // counter text-align right inherited from toolbar list item
+    }
+    .slider-wrap {
+      padding: 0;
+    }
+  }
+}

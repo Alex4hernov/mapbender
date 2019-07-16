@@ -1,0 +1,40 @@
+{
+    "name": "wheregroup/codemirror",
+    "type": "component",
+    "description": "Full-featured in-browser code editor",
+    "homepage": "http://codemirror.net",
+    "support": {
+      "issues": "http://github.com/codemirror/CodeMirror/issues"
+    },
+    "license": "MIT",
+    "keywords": [
+      "JavaScript",
+      "CodeMirror",
+      "Editor"
+    ],
+    "authors": [
+      {
+        "name": "Marijn Haverbeke",
+        "email": "marijnh@gmail.com",
+        "web": "http://marijnhaverbeke.nl"
+      }
+    ],
+    "extra": {
+      "component": {
+        "files": [
+          "lib/**",
+          "keymap/**",
+          "mode/**",
+          "theme/**",
+          "addon/**"
+        ]
+      }
+    },
+    "require":{
+      "robloach/component-installer": "0.x"
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "web/assets"
+    }
+}

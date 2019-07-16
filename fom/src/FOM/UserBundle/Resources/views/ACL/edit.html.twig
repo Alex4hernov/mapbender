@@ -1,0 +1,34 @@
+{% extends "MapbenderManagerBundle::manager.html.twig" %}
+
+{% block title %}{{ "fom.user.acl.edit.edit_class_acl" | trans({'%name%': class_name}) }}{% endblock %}
+
+{% block manager_content %}
+
+{% if 'widget_control_group_attr' in form.vars | keys  and form.vars['widget_control_group_attr']|length %}
+    {{ form_start(form, { 'action': path('fom_user_acl_update', { 'class': class }), 'method': 'POST', 'attr': {
+        novalidate: 'novalidate', autocomplete: 'off', name: form_name, 'data-aclsid': form.vars['widget_control_group_attr']
+    }}) }}
+{% else %}
+    {{ form_start(form, { 'action': path('fom_user_acl_update', { 'class': class }), 'method': 'POST', 'attr': {
+        novalidate: 'novalidate', autocomplete: 'off', name: form_name, 'data-aclsid': 'null'
+    }}) }}
+{% endif %}
+    <div id="aclTabContainer" class="tabContainer aclTabContainer">
+        <ul class="tabs">
+            <li id="tabSecurity" class="tab active">{{"fom.user.acl.edit.security" | trans }}</li>
+        </ul>
+        <div id="containerSecurity" class="container containerSecurity active">
+            <a id="addPermission" href="{{path('fom_user_acl_overview')}}" class="iconAdd iconBig right" title="{{'fom.user.acl.edit.add_users_groups'|trans}}"></a>
+            {{ form_widget(form) }}
+        </div>
+
+        <div class="clearContainer"></div>
+        {{ form_row(form._token) }}
+    </div>
+
+    <div class="right">
+      <input type="submit" value="{{ 'fom.user.acl.edit.save' | trans }}" class="button"/>
+      <a href="{{ path('fom_user_acl_index') }}" class="button critical">{{ 'fom.user.acl.edit.cancel' | trans}}</a>
+    </div>
+{{ form_end(form) }}
+{% endblock %}

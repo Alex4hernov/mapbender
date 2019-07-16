@@ -1,0 +1,31 @@
+{
+    "name": "wheregroup/open-sans",
+    "type": "component",
+    "description": "Open Sans @font-face kit",
+    "homepage": "https://github.com/FontFaceKit/open-sans",
+    "license": "Apache-2.0",
+    "authors": [
+       {"name": "Gustavo Henke ", "email": "gustavo@injoin.com.br"},
+       {"name": "Martin Domke", "email": "martin.domke@gateprotect.com"}
+    ],
+    "keywords": [
+      "font"
+    ],
+    "extra": {
+        "component": {
+	  "styles": [
+            "*.css"
+          ],
+          "files": [
+            "fonts/*/*"
+          ]
+        }
+    },
+    "require":{
+      "robloach/component-installer": "0.x"
+    },
+    "config": {
+        "bin-dir": "bin",
+        "component-dir": "web/assets"
+    }
+}

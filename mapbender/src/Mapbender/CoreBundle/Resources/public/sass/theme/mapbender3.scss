@@ -1,0 +1,202 @@
+@import "modules/base";
+@import "modules/layout";
+@import "modules/popup";
+@import "modules/text";
+@import "modules/input";
+@import "modules/button";
+@import "modules/seperator";
+@import "modules/tabcontainer";
+@import "modules/checkbox";
+@import "modules/radiobutton";
+@import "modules/dropdown";
+@import "modules/dateselector";
+@import "modules/popup_dialog";
+@import "modules/tab_navigator";
+@import "modules/result_table";
+@import "modules/digitizing_tool_set";
+
+/* ------------------------------------------------------------- MISC */
+.mb-hiddenCheckbox{
+  position: absolute;
+  @include opacity(0);
+}
+.olControlZoom {
+  display: none;
+}
+
+/* ---------------------------------------------------------- TOOLBAR */
+.logoContainer{background-image:url($headPatternUrl);}
+.toolBar {
+  @include frontendContainerStyle();
+  .toolBarItem {
+    color: fade-out($lightFontColor, .3);
+    &:hover {
+      color: $lightFontColor;
+    }
+    @include border-radius($radius);
+  }
+  .toolBarItemActive, .toolBarItemActive:hover {
+    background-color: $contentColor;
+    color:$firstColor;
+  }
+
+  &.top {
+    padding:$space/4 $space/2 $space/4 $space/2;
+    .toolBarItem {
+      display: inline-block;
+      text-wrap: avoid;
+      white-space: nowrap;
+      padding: 5px;
+      > label, > span, > a span {
+        margin-bottom: 0;
+      }
+    }
+    border-bottom:solid 1px darken($contentColor, 20%);
+  }
+  &.bottom {
+    [class^="icon"]:before,[class*=" icon"]:before{font-size: 14px;}
+    padding:$space/4 $space/2 $space/4 $space/2;
+    margin-bottom: 0;
+    .toolBarItem{
+      vertical-align: middle;
+      font-size:80%;
+      padding:5px;
+      display: inline-block;
+      text-wrap: avoid;
+      white-space: nowrap;
+
+      > label{
+        margin-bottom: 0;
+      }
+    }
+
+    .dropdownList{
+      bottom:0px;
+      margin-bottom: $inputHeight;
+    }
+  }
+  .toolBarItem{
+    display:inline;
+  }
+  &.itemsRight{
+    text-align:right;
+    .toolBarItem{padding-left:$space/4;}
+  }
+  &.itemsCenter{
+    text-align:center;
+    .toolBarItem{padding-right:$space/2;}
+  }
+}
+
+
+
+
+
+/* --------------------------------------------------------- SIDEPANE */
+.sidePaneTabItem{
+  $buttonFirstColor:#6fb536;
+  $buttonSecondColor:#5fa229;
+
+  display: block !important;
+  padding:($space/4) ($space/2);
+  margin-bottom:5px;
+  color:$lightFontColor;
+  background-color:$buttonFirstColor;
+  text-align: center;
+
+  @extend .iconOpen;
+  @extend .buttonCore;
+}
+.sidePane{
+  overflow: visible;
+  background-color: $contentColor;
+  background-image: url($contentPatternUrl);
+  border-top:1px solid darken(white, 30%);
+  border-bottom:1px solid darken(white, 30%);
+//  @include transition(all 0.4s ease-in-out);
+
+  // style for the left side pane
+  &.left{border-right:1px solid darken(white, 30%);}
+
+  // style for the right side pane
+  &.right{border-left:1px solid darken(white, 30%);}
+  .sideContent{
+    padding:$space;
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+.sidePaneOpened{
+  .sideContent{
+    display:block;
+    overflow: auto;
+  }
+  .sidePaneTabItem{@extend .iconClose;}
+}
+
+.metadataDialog{
+  .popupContent {
+    height: 100%;
+    .contentItem {
+      height: 100%;
+    }
+  }
+}
+.metadataDialog .popupContent .contentItem {
+  height: 100%;
+}
+
+.metadataContainer{
+  $labeText:85px;
+
+  .list, li{clear:both;}
+  .list{
+    border:dashed 1px darken(#fff, 20%);
+    margin-bottom:$space/2;
+    li{margin-left:$space;}
+
+    // no margin for labeltext lists ...
+    ul.left li{
+      margin-left:0px;
+      // ... and metatext below lists
+      .metaText{margin-left:0px;}
+    }
+  }
+  .labelText{
+    width:$labeText;
+    margin-right:$space/2;
+    display: inline-block;
+  }
+  .metaText{
+    display: inline-block;
+    word-wrap: break-word;
+  }
+}
+
+
+/*
+Mapbender info and error styling
+*/
+div.notifyjs-container > div.notifyjs-bootstrap-base > span{
+    display: block;
+    white-space: normal;
+    max-width: 800px;
+    max-height: 600px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.templateWrapper {
+  .toolBar a.mb-button {
+    color: inherit;
+  }
+}
+
+.mapbender-popup, .fom-popup {
+  label {
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: inherit;
+  }
+}

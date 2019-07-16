@@ -1,0 +1,57 @@
+<?php
+
+namespace {{ bundleNamespace }}\Element;
+
+use Mapbender\CoreBundle\Component\Element;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+class {{ className }} extends Element
+{
+    public static function getClassTitle()
+    {
+        return "Please give me a title";
+    }
+
+    public static function getClassDescription()
+    {
+        return "Please give me a description";
+    }
+
+    public function getAssets()
+    {
+        return array(
+            'js' => array(
+                '@{{ bundle }}:mapbender.element.{{ classNameLower }}.js'
+            ),
+            'css' => array(
+                '@{{ bundle }}:mapbender.element.{{ classNameLower }}.js'
+            )
+        );
+    }
+
+    public static function getDefaultConfiguration() {
+        return array(
+            'target' => null,
+        );
+    }
+
+    public function httpAction($action)
+    {
+        return new JsonResponse(array(
+            'message' => 'Hello World',
+        ));
+    }
+
+    public function getWidgetName()
+    {
+        return 'mapbender.mb{{ className }}';
+    }
+
+    public function render() {
+        return $this->container->get('templating')->render('{{ bundle }}:Element:{{ classNameLower }}.html.twig', array(
+                'id' => $this->getId(),
+                'configuration' => $this->entity->getConfiguration(),
+                'title' => $this->getTitle(),
+        ));
+    }
+}

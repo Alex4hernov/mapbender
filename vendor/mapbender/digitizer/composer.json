@@ -1,0 +1,35 @@
+{
+    "name": "mapbender/digitizer",
+    "description": "Mapbender digitizer element",
+    "keywords": ["mapbender", "digitizer","digitizing"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {"name": "Andriy Oblivantsev"},
+        {"name": "Stefan Winkelmann"},
+        {"name": "David Patzke"}
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "blueimp/jquery-file-upload": "9.*",
+        "mapbender/data-source": "0.*",
+        "mapbender/vis-ui.js": "*"
+    },
+    "conflict": {
+        "mapbender/mapbender": "<3.0.8"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mapbender\\DigitizerBundle": "."
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev",
+            "dev-release/1.0": "1.0.x-dev"
+        }
+    }
+}

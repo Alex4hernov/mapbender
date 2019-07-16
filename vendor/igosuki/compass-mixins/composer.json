@@ -1,0 +1,10 @@
+{
+    "name": "wheregroup/compass-mixins",
+    "description": "Compass stylesheets",
+    "homepage": "https://github.com/Igosuki/compass-mixins",
+    "license": "MIT",
+    "authors": [
+      {"name": "Guillaume Balaine", "email": "igosuki@gmail.com", "url": "https://github.com/Igosuki"},
+      {"name": "Michael Heillein", "url": "https://github.com/michaek"}
+    ]
+}

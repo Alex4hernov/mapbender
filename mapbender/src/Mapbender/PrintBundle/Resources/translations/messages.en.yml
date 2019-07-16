@@ -1,0 +1,48 @@
+mb:
+  print:
+    imageexport:
+      popup:
+        btn:
+          ok: Export
+          cancel: Cancel
+      info:
+        noactivelayer: 'No active layer!'
+      chooseformat: 'Choose Export Format'
+      class:
+        title: 'Image export'
+        description: 'Image Export allows you to export your current mapview. You can choose png or jpeg format.'
+      tag:
+        image: image
+        export: export
+        jpeg: jpeg
+        png: png
+    printclient:
+      tab:
+        settings: Job settings
+        joblist: Recent jobs
+      joblist:
+        header:
+          id: '#'
+          ctime: created
+          status: status
+        status:
+          pending: waiting
+          processing: processing
+          finished: finished
+        open: open
+        delete: delete
+        cancel: Cancel
+        nodata: no data
+        loading: loading
+    admin:
+      printclient:
+        renderMode:
+          label: Mode
+          choice:
+            direct: direct
+            queued: queued
+        queueAccess:
+          label: Job queue
+          choice:
+            global: global
+            private: private

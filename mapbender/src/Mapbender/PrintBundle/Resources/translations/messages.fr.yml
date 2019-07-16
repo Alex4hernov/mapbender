@@ -1,0 +1,18 @@
+mb:
+  print:
+    imageexport:
+      popup:
+        btn:
+          ok: Exporter
+          cancel: Annuler
+      info:
+        noactivelayer: 'Aucune couche active!'
+      chooseformat: 'Choisir un format d''exportation'
+      class:
+        title: 'Exporter en image'
+        description: 'Cet élément permet d''exporter l''étendue actuel de la carte en format png ou jpeg'
+      tag:
+        image: image
+        export: export
+        jpeg: jpeg
+        png: png

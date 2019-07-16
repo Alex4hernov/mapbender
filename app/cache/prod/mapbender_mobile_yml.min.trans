@@ -1,0 +1,19 @@
+var Mapbender = Mapbender || {};
+Mapbender.i18n = Mapbender.i18n || {};
+Mapbender.trans = function(key, replacements) {
+    if(!Mapbender.i18n[key]){
+        return key;
+    } else {
+        if(!replacements){
+            return Mapbender.i18n[key];
+        } else {
+            var result = Mapbender.i18n[key];
+            for(key in replacements){
+                result = result.replace('%'+key+'%',replacements[key]);
+            }
+            return result;
+        }
+    }
+};
+
+Mapbender.i18n = {"mb.geosource.image_error.datails":"The map cannot be displayed.","mb.geosource.image_error.exception":"Exception: %exception%","mb.geosource.image_error.statuscode":"HTTP status code","mb.core.layertree.confirm.allremove":"Really all sources delete?","mb.core.layertree.popup.btn.ok":"Close","mb.core.layertree.const.outofscale":"Layer out of scale","mb.core.layertree.const.outofbounds":"Layer out of bounds","mb.core.layertree.const.parentinvisible":"Parent layer invisible","mb.core.metadata.popup.title":"Metadata","mb.core.metadata.popup.btn.ok":"Close","mb.core.layertree.contextmenu.nooption":"Layer has no context menu option","mb.core.featureinfo.popup.btn.ok":"Close","mb.core.featureinfo.popup.btn.print":"Print","mb.core.featureinfo.error.nolayer":"No feature info layer exists.","mb.core.featureinfo.error.noresult":"no result","mb.core.gpsposition.error.notsupported":"I'm sorry, but geolocation services are not supported by your browser.","mb.core.gpsposition.error.nosignal":"Currently it's not possible to locate your position.","mb.core.basesourceswitcher.error.sourcenotavailable":"A source with id %id% is not available."};

@@ -1,0 +1,257 @@
+mb:
+  application:
+    create:
+      success: 'La tua applicazione è stata creata.'
+      failure:
+        create.directory: 'La directory dell''applicazione non può essere creata.'
+    save:
+      success: 'La tua applicazione è stata salvata.'
+      failure:
+        general: 'Si è verificato un errore durante il tentativo di salvataggio dell''applicazione.'
+        create.directory:
+          'La tua applicazione è stata aggiornata ma non è possibile creare le directory dell''applicazione.'
+    remove:
+      success: 'L''applicazione è stata eliminata.'
+      failure:
+        general: 'La tua applicazione non può essere cancellata.'
+        already.removed: 'La tua applicazione è stata già cancellata.'
+        remove.directory:
+          'La tua applicazione è stata cancellata ma le directory dell''applicazione non possono essere rimosse.'
+  layerset:
+    create:
+      success: 'Il tuo layerset di livelli è stato creato.'
+      failure:
+        unique.title: 'Il titolo Layerset è già utilizzato.'
+    remove:
+      success: 'Il tuo Layerset è stato cancellato.'
+      failure: 'Il tuo Layerset non può essere cancellato.'
+  source:
+    instance:
+      create:
+        success: 'È stata creata una nuova istanza. Si prega di modificarla.'
+  manager:
+    admin:
+      sources: Risorse
+      source:
+        add: 'Aggiungi risorsa'
+        show_metadata: 'Mostra metadati'
+        delete: 'Elimina risorsa'
+        new:
+          add: 'Aggiungi risorsa'
+        valid: 'La risorsa è valida'
+        notvalid: 'La risorsa non è valida'
+        no_source: 'Nessuna risorsa disponibile'
+        update: 'Aggiorna la risorsa'
+        status:
+          ok: 'Risorsa OK'
+          toupdate: 'Risorsa non più attuale'
+          unreachable: 'Risorsa irraggiungibile'
+      map:
+        max_extent: 'Max. estensione'
+        start_extent: 'Estensione iniziale'
+      element:
+        delete:
+          title: 'Elimina Elemento'
+          confirm: 'Sei sicuro di volere eliminare l''elemento?'
+        btn:
+          delete: Elimina
+          cancel: Cancella
+        requirements: 'I campi richiesti sono segnati con labels scure, mentre quelli opzionali hanno labels più chiare.'
+        base_data: 'Dati di base'
+        configuration: Configurazione
+        title: Titolo
+        type: Tipo
+        add: 'Aggiungi un nuovo elemento a'
+        show_hide: 'Alterna mostra/nascondi elemento'
+        edit: 'Modifica elemento'
+        no_element_added:
+          '': 'Nessun elemento aggiunto'
+      zoombar:
+        draggable: Trascinabile
+      filter:
+        source: 'Filtra risorsa'
+        layerset: 'Filtra layerset'
+        application: 'Filtra applicazioni'
+        element: 'Filtra elemento'        
+      overview:
+        maximize: Massimizza
+        fix: Fissa
+      layerset:
+        add: 'Aggiungi layerset'
+        title: Titolo
+        type: Tipo
+        edit: 'Modifica layerset'
+        delete:
+          title: 'Elimina layerset'
+          confirm: 'Sei sicuro di voler rimuovere il layerset con il titolo <span class="italic">%layerset_title%</span>?'
+        id_description: 'Id sotto forma di SourceId / InstanceId '
+        id: Id
+      instance:
+        add: 'Aggiungi istanza'
+        show_hide: 'Alterna mostra/nascondi istanza'
+        edit: 'Modifica istanza'
+        delete:
+          title: 'Elimina istanza'
+          confirm: 'Sei sicuro di voler rimuovere l''istanza con il titolo <span class="italic">%instance_title%</span>?'
+        no_instance_added: 'Nessuna istanza aggiunta'
+        no_layer_added: 'Nessun layer aggiunto'
+      template: Template
+      application:
+        view: Vedi
+        edit:
+          title: 'Modifica applicazione'
+          base_data: 'Dati di base'
+        layouts: Layouts
+        layersets: Layersets
+        custom_css: CSS
+        security:
+          title: Sicurezza
+          add_users_groups: 'Aggiungi utenti e gruppi'
+          public: attivato
+        save: Salva
+        cancel: Cancella
+        view_this: 'Vedi questa applicazione'
+        duplicate: 'Copia applicazione'
+        public:
+          on_off: 'Alterna pubblica/annulla pubblicazione applicazione'
+        delete: 'Elimina applicazione'
+        no_application: 'Nessuna applicazione disponibile'
+        new:
+          title: 'Nuova Applicazione'
+          base_data: 'Dati di base'
+        create_use: 'Crea una nuova applicazione fornendo informazioni di base e poi usa la modalità di modifica per aggiungere elementi e layers.'
+        btn:
+          create: Crea
+          cancel: Cancella
+        upload:
+          button: 'Selezione file:'
+          label: 'Nessun file selezionato'
+          tooltip: 'Fai clic per caricare uno screenshot'
+        export:
+          addAcl: ACLs
+          addSources: Risorse
+          btn:
+            export: Esporta
+            cancel: Cancella
+        import:
+          addApplications: Applicazioni
+          addAcl: ACLs
+          addSources: Risorsa
+          btn:
+            import: Importa
+            cancel: Cancella
+        title: Titolo
+        url:
+          title: 'Titolo URL'
+        description: Descrizione
+        template: Template
+      applications: Applicazioni
+    managerbundle:
+      applications: Applicazioni
+      new_application: 'Nuova applicazione'
+      sources: Fonti
+      add_source: 'Aggiungi fonte'
+      add_user_group: 'Aggiungi utenti e gruppi'
+      acl_element: 'Acl elemento'
+      import_application: Importazione
+      export_application: Esportazione
+    element:
+      yaml:
+        message: 'Usa il formato <a class="linkButton" href="http://www.wikipedia.org/search-redirect.php?search=yaml&language=%locale%">YAML</a> per descrivere la configurazione dell''elemento.'
+    be:
+      element:
+        delete: 'Elimina elemento ''%element_title%'''
+    components:
+      popup:
+        add_element:
+          title: 'Aggiungi elemento'
+          btn:
+            ok: Ok
+            cancel: Cancella
+            back: Torna
+        edit_element:
+          title: 'Modifica elemento'
+          btn:
+            ok: Aggiorna
+            cancel: Cancella
+        delete_element:
+          subtitle: elemento
+          title: 'Conferma eliminazione'
+          btn:
+            ok: Eliminaö
+            cancel: Cancella
+        add_edit_layerset:
+          title_edit: 'Modifica layerset'
+          title_add: 'Aggiungi layerset'
+          btn:
+            ok: Ok
+            cancel: Cancella
+        delete_layerset:
+          title: 'Elimina layerset'
+          btn:
+            ok: Elimina
+            cancel: Cancella
+        add_instance:
+          title: 'Seleziona fonte'
+          btn:
+            cancel: Cancella
+        delete_instance:
+          title: 'Conferma eliminazione'
+          btn:
+            ok: Elimina
+            cancel: Cancella
+        element_acl:
+          btn:
+            cancel: Cancella
+            ok: Elimina
+            add: Aggiungi
+            back: Torna
+            remove: Elimina
+    template:
+      region:
+        tabs:
+          label: Tabs
+        accordion:
+          label: Accordion
+    upload:
+      label_delete: 'Screenshot rimosso'
+    import:
+      application:
+        failed: 'L''applicazione non può essere importata.'
+      acl:
+        failed: 'Acls non può essere importato.'
+      source:
+        failed: 'Risorse non possono essere importate.'
+  core:
+    admin:
+      button:
+        show_label: 'Mostra label'
+      scaleselector:
+        show_label: 'Mostra label'
+      corrdsdisplay:
+        label: 'Mostra il titolo della label'
+      srsselector:
+        show_label: 'Mostra label'
+      gpsposition:
+        show_label: 'Mostra label'
+      element:
+        autostart: Autostart
+      about_dialog:
+        show_label: 'Mostra label del pulsante'
+    element:
+      be:
+        button:
+          show_label: 'Mostra label'
+    entity:
+      app:
+        screenshotfile:
+          error: 'Il file è troppo grande (% uploadFileSize% bytes). La dimensione massima consentita è% maxFileSize% bytes.'
+          format_error: 'Questo formato non è supportato!'
+          resolution:
+            error: 'Si possono solamente caricare dei file con la dimensione di %screenshotHeight% x %screenshotWidth% pixel  o più grande. Il file caricato ha la dimensione di %uploadWidth% x %uploadHeighth% pixel.'
+form:
+  manager:
+    admin:
+      application:
+        export:
+          application: Applicazioni

@@ -1,0 +1,47 @@
+{% set application = {'slug': 'manager'} %}
+{% extends "MapbenderManagerBundle::manager.html.twig" %}
+
+{% block title %}{{ "mb.manager.admin.application.new.title" | trans}}{% endblock %}
+
+{% block js %}
+  {{parent()}}
+  <script type="text/javascript" src="{{ asset('bundles/fomuser/js/acl-form.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/mapbendermanager/js/application-edit.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('bundles/mapbendermanager/js/confirm-delete.js') }}"></script>
+{% endblock %}
+
+{% block manager_content %}
+    {{ form_start(form, {"attr": {"action": path('mapbender_manager_application_create'), "novalidate": "novalidate"}}) }}
+    <div id="applicationTabContainer" class="tabContainer applicationTabContainer">
+      <ul class="tabs">
+        <li id="tabBaseData" class="tab active">{{"mb.manager.admin.application.new.base_data" | trans }}</li>
+        <li id="tabSecurity" class="tab">{{"mb.manager.admin.application.security.title" | trans }}</li>
+      </ul>
+      <div id="containerBaseData" class="container active containerBaseData row no-gutters">
+          <div class="col-xs-8">
+            <label class="labelInput" for="{{ form.title.vars.id }}">{{"mb.manager.admin.application.template" | trans}}:<span class="required">*</span></label>
+            {{ form_widget(form.template) }}
+            {% include 'MapbenderManagerBundle:Application:form-basic.html.twig' %}
+           </div>
+           <div class="col-xs-4">
+                <div class="messageBox hint">
+                    {{"mb.manager.admin.application.create_use" | trans }}
+                </div>
+           </div>
+      </div>
+
+      <div id="containerSecurity" class="container containerSecurity">
+        {% block securityTab %}
+          {% include 'MapbenderManagerBundle:Application:form-security.html.twig' %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div class="button-group">
+      <input type="submit" value="{{ 'mb.manager.admin.application.btn.create' | trans }}" class="button"/>
+      <a href="{{ path('mapbender_manager_application_index') }}" class="button critical">{{ 'mb.manager.admin.application.btn.cancel' | trans}}</a>
+    </div>
+
+    {{ form_row(form._token) }}
+    {{ form_end(form, {"render_rest": false}) }}
+{% endblock %}

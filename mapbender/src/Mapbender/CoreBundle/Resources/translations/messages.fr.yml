@@ -1,0 +1,427 @@
+mb:
+  core:
+    featureinfo:
+      error:
+        nolayer: 'Impossible d''identifier l''objet.'
+        unknownoption: 'Option %key% inconnue ou non prise en charge pour %namespace%.%widgetname%.'
+        noresult: 'aucun résultat'
+      popup:
+        btn:
+          ok: Fermer
+          print: Imprimer
+      class:
+        title: Identifier
+        description: Identifier l'objet cliqué sur la carte
+      tag:
+        featureinfo: featureinfo
+        feature: feature
+        info: info
+        dialog: dialog
+    aboutdialog:
+      content:
+        versionprefix: v.
+        learnmore: 'En savoir davantage sur Mapbender'
+        linktitle: 'Visiter le site web officiel de Mapbender'
+        website: website
+      class:
+        title: 'Fenêtre "À propos"'
+        description: 'Affiche une fenêtre "À propos"'
+      tag:
+        help: help
+        info: info
+        about: about
+    simplesearch:
+      input:
+        search: ~
+      class:
+        title: 'Recherche simple'
+        description: 'Recherche à un seul champ sur des sources JSON (e.g. Solr)'
+      error:
+        geometry:
+          missing: L'entrée sélectionnée ne contient aucune géométrie.
+    searchrouter:
+      popup:
+        btn:
+          ok: Rechercher
+          cancel: Fermer
+          reset: Réinitialiser
+      no_results: 'Aucun résultat.'
+      result_counter: 'Résultats: %count%'
+      class:
+        title: 'Routeur de recherche'
+        description: 'Élément de routeur de recherche configurable'
+      tag:
+        search: search
+        router: router
+    poi:
+      sharepoi: 'Partager un POI'
+      text:
+        snippet: 'Vous pouvez obtenir l''extrait suivant pour envoyer le POI'
+      popup:
+        btn:
+          ok: Ok
+          cancel: Annuler
+      class:
+        title: POI
+        description: 'Permet de créer un POI (point d''intérêt) pour le partager'
+      tag:
+        poi: poi
+        point: point
+        interest: interest
+      label:
+        text: Text
+    basesourceswitcher:
+      error:
+        sourcenotavailable: 'La source avec le id %id% n''est pas disponible'
+      class:
+        title: 'Sélectionneur de fond de carte'
+        Description: 'Permet de sélectionner la couche de fond de la carte.'
+      tag:
+        base: base
+        source: source
+        switcher: switcher
+      form:
+        mesage: 'Aucun fond de carte n''est défini.'
+    legend:
+      nolegend: 'Aucune légende n''est disponible.'
+      popup:
+        btn:
+          ok: Fermer
+      class:
+        title: Légende
+        description: 'Affiche la légende de la carte'
+      tag:
+        layer: layer
+        legend: legend
+    ruler:
+      popup:
+        btn:
+          ok: Fermer
+      create_error: 'Mesurer: Le type doit être une ligne ou un polygone.'
+      class:
+        title: 'Mesure linéaire ou surfacique'
+        description: 'Permet de mesurer des segments linéaires ou des superficies puis d''afficher les mesures dans une fenêtre'
+      tag:
+        line: line
+        area: area
+        measure: measure
+    printclient:
+      label:
+        template: Modèle
+        quality: Qualité
+        scale: Échelle
+        rotation: Rotation
+        legend: 'Imprimer la légende'
+      popup:
+        btn:
+          ok: Imprimer
+          cancel: Annuler
+      info:
+        noactivelayer: 'Aucune couche n''est activée!'
+      form:
+        required: 'Ce champ est obligatoire'
+      class:
+        title: 'Client d''impression'
+        description: 'Affiche une fenêtre d''impression. Permet d''exporter en format PDF'
+      tag:
+        print: print
+        pdf: pdf
+        png: png
+        gif: gif
+        jpg: jpg
+        jpeg: jpeg
+      btn:
+        deactivate: 'Désactiver le cadre de l''impression'
+        activate: 'Activer le cadre de l''impression'
+    overview:
+      nolayer: 'L''élément ''Vue d''ensemble'' n''a aucune couche.'
+      class:
+        title: 'Vue d''ensemble'
+        description: 'Affiche la vue d''ensemble de la carte'
+      tag:
+        overview: overview
+        map: map
+    sketch:
+      circle:
+        radius:
+          label: Rayon
+          error: 'Le rayon est invalide'
+        form:
+          button:
+            'yes': 'Oui'
+            cancel: Annuler
+      class:
+        title: Esquisse
+        description: 'Ajoute une couche vectorielle à la carte et permet de dessiner des géométries'
+      tag:
+        sketch: sketch
+        circle: circle
+    metadata:
+      popup:
+        title: Metadonnées
+        btn:
+          ok: Fermer
+    gpsposition:
+      error:
+        notsupported: Le service de géolocalisation n'est pas supporté par votre navigateur.
+        nosignal: Il est impossible de vous géolocaliser pour le moment.
+      class:
+        title: 'Position GPS'
+        description: 'Génère un bouton affichant la position GPS'
+      tag:
+        gpsposition: 'GPS Position'
+        gps: GPS
+        position: position
+        button: button
+    layertree:
+      confirm:
+        allremove: 'Voulez-vous vraiment supprimer toutes les sources?'
+      popup:
+        btn:
+          ok: Fermer
+      const:
+        outofscale: ~
+        outofbounds: ~
+        parentinvisible: 'La couche parent est invisible'
+      tooltip:
+        sublayers_openclose: 'Ouvrir/Fermer la sous-couche'
+        removelayer: 'Supprimer la couche'
+        menu:
+          close: Fermer
+      label:
+        visibility_onoff: 'Visibilité On/Off'
+        featureinfo_onoff: 'FeatureInfo On/Off'
+        opacity: Opacité
+        zoomtolayer: ~
+        metadata: Metadonnées
+        sources: Sources
+        deleteallsources: 'Supprimer toutes les sources'
+        legend: Légende
+        kmlexport: 'Exporter en KML'
+        dimension_onoff: 'On/Off Dimension'
+        dimension: Dimension
+        sourcevisibility_onoff: 'Afficher les sources'
+        allvisibility_on: 'Afficher toutes les couches'
+      class:
+        title: 'Arborescence des couches'
+        description: 'Arborescence des couches de la carte'
+      tag:
+        layertree: layertree
+        layer: layer
+        tree: tree
+      contextmenu:
+        nooption: ~
+    zoombar:
+      panup: 'Déplacer vers le haut'
+      panright: 'Déplacer vers la droite'
+      pandown: 'Déplacer vers le bas'
+      panleft: 'Déplacer vers la gauche'
+      goback: 'Avancer'
+      goforward: 'Reculer'
+      zoombybox: 'Zoomer sur la boite'
+      zoombyworld: 'Zoomer sur l''étendue globale'
+      zoomin: ~
+      zoomout: ~
+      class:
+        title: 'Outils de navigation'
+        description: 'Cet élément affiche boîte de contrôle flottante permettant de zoomer et de se déplacer sur la carte (ressemble au contrôle PanZoomBar d''OpenLayers). Cet élément est plus facile à utiliser lorsqu''un style personnalisé est requis.'
+      tag:
+        zoom: zoom
+        pan: pan
+        control: control
+        navigation: navigation
+        panel: panel
+    activityindicator:
+      class:
+        title: 'Indicateur d''activité'
+        description: 'Affiche l''activité HTTP'
+      tag:
+        activity: activity
+        indicator: indicator
+    button:
+      class:
+        title: Bouton
+        description: Bouton
+      tag:
+        button: button
+    coordinatesdisplay:
+      class:
+        title: 'Afficheur de coordonnées'
+        description: 'L''afficheur de coordonnées montre les coordonnées de la position de la souris'
+      tag:
+        coordinates: coordinates
+        display: display
+        mouse: mouse
+        position: position
+    copyright:
+      class:
+        title: Droits d'auteur
+        description: 'Affiche les conditions d''utilisation'
+      tag:
+        copyright: Copyright
+        dialog: dialog
+    map:
+      class:
+        title: Carte
+      tag:
+        map: map
+        mapquery: MapQuery
+        openlayers: OpenLayers
+      srsnotfound: 'Les propriétés du SRS pour %srslist% sont introuvables'
+    mapabs:
+      class:
+        description: 'Carte basée sur MapQuery/OpenLayers'
+    scalebar:
+      class:
+        title: 'Barre d''échelle'
+        description: 'La barre d''échelle affiche un indicateur linéaire représentant l''échelle actuelle de la carte.'
+      tag:
+        scale: scale
+        bar: bar
+    scaledisplay:
+      class:
+        title: 'Échelle numérique'
+        description: 'Affiche l''échelle numérique actuelle de la carte'
+      tag:
+        scale: scale
+        display: display
+    scaleselector:
+      class:
+        title: 'Sélectionneur d''échelle'
+        description: 'Permet d''afficher et de changer l''échelle de la carte'
+      tag:
+        scale: scale
+        selector: selector
+    srsselector:
+      class:
+        title: 'Sélectionneur de SRS'
+        description: 'Permet de sélectionner le système de référence spatial (SRS)'
+      tag:
+        srs: SRS
+        selector: selector
+    admin:
+      poi:
+        label:
+          usemailto: ~
+      legend:
+        label:
+          autoopen: ~
+          hideemptylayers: 'Cacher les couches vides'
+          generatelegendurl: 'Générer l''URL de la légende'
+          showsourcetitle: 'Afficher le titre de la source'
+          showlayertitle: 'Afficher le titre de la couche'
+          showgroupedlayertitle: 'Afficher le titre des groupes de couches'
+      featureinfo:
+        label:
+          autoopen: ~
+          deactivateonclose: ~
+          showoriginal: ~
+          onlyvalid: ~
+      printclient:
+        label:
+          autoopen: ~
+          rotatable: Pivotable
+          legend: 'Imprimer la légende'
+          legend_default_behaviour: ~
+      copyright:
+        label:
+          autoopen: ~
+      layertree:
+        label:
+          showbasesources: 'Afficher les fonds de carte'
+          autoopen: Autoopen
+          showheader: 'Afficher l''entête'
+          showlayerremove: 'Afficher l''option de supression de couche'
+          usetheme: 'Couche thématique'
+          themes: Themes
+          theme:
+            opened: ouvert
+            activate: 'Permettre la suppression/l''ajout de couches'
+            useTheme: 'Afficher le thème'
+            sourceVisibility: 'Thème: visibilité de la source'
+            allSelected: 'Thème: visibilité de la source'
+            label: 'nom du thème'
+          hidenottoggleable: 'Ne pas afficher les couches non-basculables'
+          hideselect: 'Ne pas afficher la visiblité pour les dossiers'
+          hideinfo: 'Ne pas afficher l''information'
+      redlining:
+        label:
+          auto_activate: ~
+          deactivate_on_close: 'Désactiver à la fermeture'
+    htmlelement:
+      class:
+        title: HTML
+        description: 'Ajouter du code HTML'
+      tag:
+        html: HTML
+    entity:
+      app:
+        screenshotfile:
+          error: Erreur
+    redlining:
+      geometrytype:
+        point: Point
+        line: Ligne
+        polygon: Polygone
+        rectangle: Rectangle
+        text:
+          title: Texte
+          label: Texte
+      geometry:
+        action:
+          remove: 'Supprimer la géométrie'
+          edit: 'Modifier la géometrie'
+          zoom: 'Zoomer sur la géométrie'
+      dialog:
+        btn:
+          cancel: Fermer
+      class:
+        title: Annotation
+        description: 'Outil d''annotation'
+      tag:
+        redlining: redlining
+        geometry: geometry
+  geosource:
+    image_error:
+      datails: 'La carte ne peut pas être affichée.'
+      exception: 'Exception: %exception%'
+      statuscode: 'Code de statut HTTP'
+
+Search: __Search
+FeatureInfo: 'Données caractéristiques'
+Services: Services
+'X coordinate': 'Coordonnées X'
+'Y coordinate': 'Coordonnées Y'
+'Pan up': 'Déplacer vers le haut'
+'Pan right': 'Déplacer vers la droite'
+'Pan down': 'Déplacer vers le bas'
+'Pan left': 'Déplacer vers la gauche'
+'Go back': Retour
+'Go forward': Suivant
+'Zoom by box': 'Zoomer sur la sélection'
+'Zoom in': 'Zoom avant'
+'Click to zoom': 'Cliquer pour zoomer'
+'Zoom out': 'Zoom arrière'
+About: 'À propos'
+Save: Enregistrer
+Cancel: Annuler
+'Add Group': 'Ajouter un groupe'
+Delete: Supprimer
+'Really Delete': 'Supprimer définitivement'
+'Group Index': 'Index des groupes'
+'Available Groups': 'Groupes disponibles'
+Name: Nom
+Edit: Modifier
+'No Groups': 'Aucun groupe'
+'Add User': 'Ajouter un utilisateur'
+'Realy delete?': 'Supprimer définitivement?'
+'Yes': Oui
+'No': Non
+save: enregistrer
+'User Index': 'Index des utilisateurs'
+'Available Users': 'Utilisateurs disponibles'
+'No Users': 'Aucun utilisateur'
+'Share POI': 'Partager le POI'
+Text: Texte
+'You can use the following snippet in an email to send the POI':
+  '': 'Vous pouvez utiliser l''extrait suivant pour partager le POI.'

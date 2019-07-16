@@ -1,0 +1,108 @@
+.elementForm {
+  $labelWidth: 70px;
+  .labelInput {
+    width: $labelWidth;
+    margin-bottom: $space/2;
+  }
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+  select {
+    font-size: 12px;
+    padding-left: 5px;
+  }
+  .input {
+    width: 100%
+  }
+  .dropdown {
+    min-width: 70%;
+  }
+  .inputWrapper, select, .choiceExpandedSortable, .collectionContainer {
+    width: 70%;
+    color: $secondColor;
+
+    .validationMsgBox{
+      min-width: 28%;
+    }
+  }
+  .choiceExpandedSortable {
+    color: $secondColor;
+    display: inline-block;
+    border: solid 1px lighten($thirdColor, 15%);
+    background-color: $contentColor;
+    .sortableItem {
+      padding: 0 0.4em;
+      cursor: move;
+      line-height: $lineHeight;
+      .checkWrapper, label {
+        line-height: inherit;
+        color: inherit;
+        margin: 0;
+      }
+      label {
+        cursor: inherit;
+        width: 92%; // for browser without calc
+        // Width taken by checkbox is exactly $fontSize
+        // No immediate variable refs inside calc(): https://github.com/sass/sass/issues/818
+        width: calc(100% - #{$fontSize} - 2px);  // subtract fontsize (=checkbox width) plus 2 extra pixels for safety
+        padding-left: 0.2em;
+      }
+      &:hover {
+        background-color: darken($contentColor, 10%);
+      }
+    }
+  }
+  // add margin between consecutive "inline" checkboxes with .left
+  .left > .labelCheck {
+    margin-right: $space;
+  }
+}
+
+.wideLabelForm {
+  $label: 100px;
+  .labelInput {
+    width: $label;
+  }
+  .inputWrapper, select, .choiceExpandedSortable, .collectionContainer {
+    width: calc(100% - #{$label + $space});
+  }
+  .dropdown {
+    min-width: calc(100% - #{$label + $space});
+    width: calc(100% - #{$label + $space});
+  }
+}
+
+.extraWideLabelForm {
+  $label: 120px;
+  .labelInput {
+    width: 120px;
+  }
+  .inputWrapper, select, .choiceExpandedSortable, .collectionContainer {
+    width: calc(100% - #{$label + $space});
+  }
+  .dropdown {
+    min-width: calc(100% - #{$label + $space});
+    width: calc(100% - #{$label + $space});
+  }
+}
+
+.collectionItem {
+  clear: both;
+  position: relative;
+  .labelInput {
+    clear: both;
+  }
+  textarea {
+    height: 100px;
+    margin-bottom: $space;
+  }
+}
+
+.collectionRemove {
+  line-height: $inputHeight;
+  position: absolute;
+  right: 31px;
+  top: -6px;
+  z-index: 1;
+}
